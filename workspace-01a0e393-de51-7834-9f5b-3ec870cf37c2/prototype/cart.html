@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سبد خرید و تکمیل سفارش | ژیوار</title>
+<style>
+  :root{
+    --cream:#FAF7F4;--cream-2:#F3EDE7;--plum:#3B2A34;--plum-soft:#5A4350;
+    --rose:#C49A9A;--rose-deep:#A97B7B;--gold:#C9A96A;--ink:#2B2024;
+    --muted:#8A7B80;--white:#FFFFFF;--shadow:0 10px 40px rgba(59,42,52,.10);--radius:22px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+  input,select,textarea{font-family:inherit;font-size:14.5px}
+  ::selection{background:var(--rose);color:#fff}
+  .announce{background:var(--plum);color:#EFE3E0;font-size:13px;text-align:center;padding:9px 16px}
+  .announce b{color:var(--gold)}
+  header{position:sticky;top:0;z-index:100;background:rgba(250,247,244,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(59,42,52,.07)}
+  .nav{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:14px 24px}
+  .logo{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:800;color:var(--plum)}
+  .logo .mark{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--plum),var(--rose-deep));display:grid;place-items:center;color:#fff;font-size:18px;font-weight:800}
+  .logo small{display:block;font-size:9px;font-weight:400;color:var(--muted);letter-spacing:4px;margin-top:-4px}
+  .nav-links{display:flex;gap:24px;font-size:14.5px;font-weight:500;color:var(--plum-soft)}
+  .nav-links a:hover{color:var(--rose-deep)}
+  .nav-actions{display:flex;gap:6px}
+  .icon-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:18px;color:var(--plum);position:relative;transition:background .2s}
+  .icon-btn:hover{background:var(--cream-2)}
+  .badge{position:absolute;top:2px;left:2px;min-width:18px;height:18px;border-radius:9px;background:var(--rose-deep);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 4px}
+  .wrap{max-width:1240px;margin:auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:100px;font-size:15px;font-weight:700;transition:.25s}
+  .btn-primary{background:var(--plum);color:#fff;box-shadow:0 10px 30px rgba(59,42,52,.28)}
+  .btn-primary:hover{background:var(--plum-soft);transform:translateY(-3px)}
+  .btn-ghost{background:var(--white);color:var(--plum);border:1.5px solid rgba(59,42,52,.15)}
+  .btn-ghost:hover{border-color:var(--rose-deep);color:var(--rose-deep)}
+  .btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+  .page-title{font-size:30px;font-weight:800;color:var(--plum);padding:34px 0 8px}
+  .page-sub{color:var(--muted);font-size:14.5px;margin-bottom:30px}
+  /* steps */
+  .steps{display:flex;align-items:center;gap:0;margin-bottom:38px;background:var(--white);border-radius:18px;padding:18px 24px;box-shadow:0 4px 20px rgba(59,42,52,.05)}
+  .step{display:flex;align-items:center;gap:12px;flex:1;font-size:14px;font-weight:700;color:var(--muted)}
+  .step .n{width:34px;height:34px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;font-size:14px;font-weight:800;color:var(--muted);transition:.3s}
+  .step.active{color:var(--plum)}
+  .step.active .n{background:var(--plum);color:#fff}
+  .step.done{color:#3FA46A}
+  .step.done .n{background:#3FA46A;color:#fff}
+  .step-line{flex:1;height:2px;background:var(--cream-2);margin:0 14px;position:relative;overflow:hidden}
+  .step-line::after{content:'';position:absolute;inset:0;background:#3FA46A;transform:scaleX(0);transform-origin:right;transition:.5s}
+  .step-line.done::after{transform:scaleX(1)}
+  /* layout */
+  .checkout{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start;padding-bottom:70px}
+  .box{background:var(--white);border-radius:24px;padding:30px;box-shadow:0 4px 24px rgba(59,42,52,.06);margin-bottom:22px}
+  .box h3{font-size:19px;font-weight:800;color:var(--plum);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+  /* cart items */
+  .c-item{display:grid;grid-template-columns:90px 1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--cream-2);align-items:center}
+  .c-item:last-child{border:none;padding-bottom:0}
+  .c-item .ph{width:90px;height:108px;border-radius:14px}
+  .c-item b{font-size:14.5px;color:var(--plum);display:block;line-height:1.5}
+  .c-item .meta{font-size:12.5px;color:var(--muted);margin:4px 0 8px}
+  .c-item .p{font-size:15px;font-weight:800;color:var(--rose-deep)}
+  .c-item .ctrl{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+  .qty{display:flex;align-items:center;background:var(--cream);border-radius:10px;overflow:hidden;border:1px solid rgba(59,42,52,.08)}
+  .qty button{width:32px;height:32px;font-size:15px;color:var(--plum)}
+  .qty button:hover{background:var(--cream-2)}
+  .qty span{width:32px;text-align:center;font-size:13.5px;font-weight:700;color:var(--plum)}
+  .rm{font-size:12.5px;color:var(--muted)}
+  .rm:hover{color:var(--rose-deep)}
+  /* form */
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13.5px;font-weight:700;color:var(--plum);margin-bottom:7px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 16px;border-radius:14px;
+    border:1.5px solid rgba(59,42,52,.12);background:var(--cream);
+    transition:.2s;color:var(--ink);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--rose-deep);background:#fff}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  /* delivery options */
+  .opt{display:flex;align-items:center;gap:14px;padding:16px;border:1.5px solid rgba(59,42,52,.1);border-radius:16px;margin-bottom:12px;cursor:pointer;transition:.2s}
+  .opt:hover{border-color:var(--rose)}
+  .opt.sel{border-color:var(--plum);background:#FBF7F4}
+  .opt .ic{width:42px;height:42px;border-radius:12px;background:var(--cream-2);display:grid;place-items:center;font-size:19px}
+  .opt b{font-size:14.5px;color:var(--plum);display:block}
+  .opt span{font-size:12.5px;color:var(--muted)}
+  .opt .pr{margin-inline-start:auto;font-size:13.5px;font-weight:700;color:var(--plum)}
+  /* payment */
+  .gate{display:flex;align-items:center;gap:14px;padding:16px;border:1.5px solid rgba(59,42,52,.1);border-radius:16px;margin-bottom:12px;cursor:pointer;transition:.2s}
+  .gate.sel{border-color:var(--plum);background:#FBF7F4}
+  .gate .logo-g{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:linear-gradient(135deg,#F7E8E8,#EFDFC9)}
+  .gate b{font-size:14.5px;color:var(--plum);display:block}
+  .gate span{font-size:12px;color:var(--muted)}
+  /* summary */
+  .summary{position:sticky;top:90px}
+  .s-row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:12px}
+  .s-row b{color:var(--plum)}
+  .s-total{display:flex;justify-content:space-between;align-items:center;padding-top:16px;margin-top:16px;border-top:1.5px dashed rgba(59,42,52,.15)}
+  .s-total span{font-size:14px;color:var(--muted)}
+  .s-total b{font-size:22px;font-weight:800;color:var(--rose-deep)}
+  .coupon{display:flex;gap:10px;margin:18px 0}
+  .coupon input{flex:1;padding:13px 16px;border-radius:14px;border:1.5px dashed var(--rose);background:var(--cream);font-size:13.5px}
+  .coupon button{padding:0 20px;border-radius:14px;background:var(--cream-2);color:var(--plum);font-weight:700;font-size:13.5px;transition:.2s}
+  .coupon button:hover{background:var(--plum);color:#fff}
+  .secure{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;color:var(--muted);margin-top:14px}
+  .empty{text-align:center;padding:70px 20px}
+  .empty .ic{font-size:64px;margin-bottom:18px}
+  .empty h3{font-size:22px;font-weight:800;color:var(--plum);margin-bottom:10px}
+  .empty p{color:var(--muted);margin-bottom:26px}
+  .toast{position:fixed;bottom:28px;right:50%;transform:translate(50%,80px);background:var(--plum);color:#fff;padding:14px 26px;border-radius:100px;font-size:14px;font-weight:600;box-shadow:0 14px 40px rgba(0,0,0,.25);opacity:0;transition:.4s;z-index:200}
+  .toast.show{opacity:1;transform:translate(50%,0)}
+  footer{background:var(--plum);color:#D8C8C3}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 24px;text-align:center;font-size:13px;color:#B9A6AB}
+  @media(max-width:1024px){
+    .checkout{grid-template-columns:1fr}
+    .summary{position:static}
+    .nav-links{display:none}
+    .step span{display:none}
+  }
+  @media(max-width:600px){
+    .field-row{grid-template-columns:1fr}
+    .c-item{grid-template-columns:70px 1fr}
+    .c-item .ctrl{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">🔒 پرداخت امن از طریق درگاه‌های معتبر • پشتیبانی ۲۴ ساعته: <b>@ZhevarBot</b></div>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="mark">ژ</span><span>ژیوار<small>ZHEVAR</small></span></a>
+    <div class="nav-links">
+      <a href="index.html">ادامه خرید</a>
+      <a href="index.html#ai">مشاور هوشمند</a>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="icon-btn" title="بازگشت به فروشگاه">🏠</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap">
+  <h1 class="page-title">سبد خرید و تکمیل سفارش</h1>
+  <p class="page-sub">۳ قلم در سبد تو هست • کد تخفیف «ZHEVAR10» رو از کانال تلگرام بگیر</p>
+
+  <div class="steps">
+    <div class="step done"><span class="n">✓</span><span>سبد خرید</span></div>
+    <div class="step-line done"></div>
+    <div class="step active"><span class="n">۲</span><span>اطلاعات ارسال</span></div>
+    <div class="step-line"></div>
+    <div class="step"><span class="n">۳</span><span>پرداخت</span></div>
+  </div>
+
+  <div class="checkout">
+    <div>
+      <!-- Cart -->
+      <div class="box">
+        <h3>🛍️ اقلام سبد خرید</h3>
+        <div id="cartList"></div>
+      </div>
+
+      <!-- Delivery -->
+      <div class="box">
+        <h3>🚚 روش ارسال</h3>
+        <div class="opt sel" onclick="sel(this)">
+          <div class="ic">🛵</div>
+          <div><b>پیک اختصاصی ژیوار</b><span>تهران • تحویل ۲۴ ساعته</span></div>
+          <span class="pr">رایگان</span>
+        </div>
+        <div class="opt" onclick="sel(this)">
+          <div class="ic">📦</div>
+          <div><b>پست پیشتاز</b><span>سایر شهرها • ۲ تا ۴ روز کاری</span></div>
+          <span class="pr">۶۵٬۰۰۰ تومان</span>
+        </div>
+        <div class="opt" onclick="sel(this)">
+          <div class="ic">🏪</div>
+          <div><b>تحویل حضوری</b><span>از نمایندگی ژیوار — خیابان ولیعصر</span></div>
+          <span class="pr">رایگان</span>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="box">
+        <h3>📍 اطلاعات تحویل</h3>
+        <div class="field-row">
+          <div class="field"><label>نام و نام خانوادگی</label><input placeholder="مثال: سارا محمدی"></div>
+          <div class="field"><label>شماره موبایل</label><input placeholder="۰۹۱۲۳۴۵۶۷۸۹"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>استان</label>
+            <select><option>تهران</option><option>اصفهان</option><option>شیراز</option><option>مشهد</option><option>تبریز</option><option>سایر استان‌ها</option></select>
+          </div>
+          <div class="field"><label>شهر</label><input placeholder="مثال: تهران"></div>
+        </div>
+        <div class="field"><label>نشانی کامل</label><textarea rows="3" placeholder="خیابان، کوچه، پلاک، واحد و کد پستی"></textarea></div>
+        <div class="field"><label>یادداشت برای سفارش (اختیاری)</label><input placeholder="مثال: زنگ زدن قبل از ارسال"></div>
+      </div>
+
+      <!-- Payment -->
+      <div class="box">
+        <h3>💳 روش پرداخت</h3>
+        <div class="gate sel" onclick="selG(this)">
+          <div class="logo-g">🏦</div>
+          <div><b>درگاه زرین‌پال</b><span>پرداخت اینترنتی امن با کارت‌های بانکی عضو شتاب</span></div>
+        </div>
+        <div class="gate" onclick="selG(this)">
+          <div class="logo-g">💰</div>
+          <div><b>درگاه آیدی‌پی (IDPay)</b><span>پرداخت با تمام کارت‌های عضو شتاب</span></div>
+        </div>
+        <div class="gate" onclick="selG(this)">
+          <div class="logo-g">🤖</div>
+          <div><b>پرداخت از طریق ربات تلگرام</b><span>لینک پرداخت برات در @ZhevarBot ارسال می‌شه</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+      <div class="box">
+        <h3>🧾 خلاصه سفارش</h3>
+        <div class="s-row"><span>جمع اقلام (۳ قلم)</span><b id="sumItems">۵٬۶۵۰٬۰۰۰ تومان</b></div>
+        <div class="s-row"><span>هزینه ارسال</span><b style="color:#3FA46A">رایگان</b></div>
+        <div class="s-row"><span>سود شما از خرید</span><b style="color:var(--rose-deep)">۸۱۰٬۰۰۰ تومان</b></div>
+        <div class="coupon">
+          <input placeholder="کد تخفیف" id="couponInput">
+          <button onclick="applyCoupon()">اعمال</button>
+        </div>
+        <div class="s-total"><span>مبلغ قابل پرداخت</span><b id="sumTotal">۵٬۶۵۰٬۰۰۰ تومان</b></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:22px" onclick="pay()">🔒 پرداخت و ثبت سفارش</button>
+        <div class="secure">🔐 اطلاعات شما با رمزنگاری SSL محافظت می‌شود</div>
+      </div>
+      <div class="box" style="text-align:center">
+        <div style="font-size:34px">🤖</div>
+        <b style="display:block;color:var(--plum);margin:8px 0 6px">مشاوره سایز قبل از خرید</b>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px">با چت ربات تلگرام، سایز دقیقت رو بگیر و از مرجوعی جلوگیری کن</p>
+        <a href="#" class="btn btn-ghost" style="width:100%">شروع مشاوره در تلگرام</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="foot-bottom">© ۲۰۲۶ ژیوار — تمام حقوق محفوظ است.</div></footer>
+<div class="toast" id="toast">✅ کد تخفیف اعمال شد</div>
+
+<script>
+  const items=[
+    {name:'پیراهن بلند ساتن رزگلد',meta:'رزگلد • سایز M',price:'۱٬۸۹۰٬۰۰۰',qty:1,g:'linear-gradient(160deg,#E8CFC4,#C9A0A0)'},
+    {name:'گوشواره طلایی آویز کوچک',meta:'طلای کوبی',price:'۶۴۰٬۰۰۰',qty:1,g:'linear-gradient(160deg,#EBD9B7,#C9A96A)'},
+    {name:'ست دانتل کرم',meta:'کرم • سایز M',price:'۹۸۰٬۰۰۰',qty:2,g:'linear-gradient(160deg,#F3E3DC,#D9BDB2)'}
+  ];
+  const list=document.getElementById('cartList');
+  function render(){
+    list.innerHTML='';
+    items.forEach((it,i)=>{
+      const d=document.createElement('div');d.className='c-item';
+      d.innerHTML=`
+        <div class="ph" style="background:${it.g}"></div>
+        <div><b>${it.name}</b><div class="meta">${it.meta}</div><div class="p">${it.price} تومان</div></div>
+        <div class="ctrl">
+          <div class="qty"><button onclick="q(${i},-1)">−</button><span>${it.qty}</span><button onclick="q(${i},1)">+</button></div>
+          <button class="rm" onclick="rm(${i})">🗑️ حذف</button>
+        </div>`;
+      list.appendChild(d);
+    });
+  }
+  function q(i,n){items[i].qty=Math.max(1,items[i].qty+n);render()}
+  function rm(i){items.splice(i,1);render()}
+  render();
+  function sel(el){el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel')}
+  function selG(el){el.parentElement.querySelectorAll('.gate').forEach(o=>o.classList.remove('sel'));el.classList.add('sel')}
+  const toast=document.getElementById('toast');let tt;
+  function applyCoupon(){
+    const v=document.getElementById('couponInput').value.trim();
+    toast.textContent=v?'✅ کد تخفیف ۱۰٪ اعمال شد':'❌ کد تخفیف رو وارد کن';
+    toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),1800);
+  }
+  function pay(){toast.textContent='🔐 در حال انتقال به درگاه پرداخت امن...';toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),2500)}
+</script>
+</body>
+</html>

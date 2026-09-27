@@ -1,0 +1,1568 @@
+You are a senior product designer, UX/UI designer, e-commerce architect, full-stack developer, SEO specialist, CRM strategist, and fashion-commerce consultant.
+
+Your task is to DESIGN AND BUILD a complete, modern, premium, scalable, production-ready e-commerce website for a fashion accessories brand specializing in:
+
+* Women's belts
+* Fashion accessories
+* Costume jewelry / fashion jewelry
+* Jewelry sets
+* Related fashion products
+
+The website must NOT look like a generic e-commerce template.
+
+It should feel like a premium fashion brand combined with a modern editorial fashion magazine and a professional B2B wholesale platform.
+
+The PRIMARY PURPOSE of the website is ONLINE SHOPPING.
+
+The website must have three major pillars:
+
+1. B2C RETAIL SHOPPING — primary business
+2. B2B WHOLESALE SHOPPING — for retailers and business partners
+3. FASHION DAILY — a daily digital fashion newspaper / magazine containing fashion news, trends, styling, runway news, popular products, colors, celebrity styles, seasonal trends, and editorial content
+
+The content system must ultimately support commerce:
+CONTENT → DISCOVERY → PRODUCT → PURCHASE
+
+Do not sacrifice shopping UX for editorial content.
+
+==================================================
+
+1. BRAND & VISUAL DIRECTION
+   ==================================================
+
+Create a premium, modern, elegant fashion-commerce visual identity.
+
+The visual language should combine:
+
+* Luxury fashion magazine
+* Modern e-commerce
+* Editorial design
+* Minimalism
+* Premium accessories branding
+* Clean typography
+* Strong photography
+* Sophisticated spacing
+* High-end product presentation
+
+Avoid:
+
+* Generic Bootstrap-looking layouts
+* Excessive gradients
+* Excessive rounded cards
+* Cheap-looking UI
+* Overloaded dashboards
+* Unnecessary animations
+* Random decorative elements
+* AI-generated-looking interfaces
+
+The design should feel intentional, premium, commercial and trustworthy.
+
+==================================================
+2. COLOR SYSTEM
+===============
+
+Use a token-based color system so the colors can be changed globally.
+
+LIGHT MODE:
+
+Primary: #004741
+Background: #F0EDE4
+Text: #171717
+White: #FFFFFF
+
+DARK MODE:
+
+Primary: #21F1A8
+Background: #171717
+Text: #F0EDE4
+
+Create semantic design tokens:
+
+--color-primary
+--color-background
+--color-surface
+--color-text
+--color-muted
+--color-border
+--color-success
+--color-warning
+--color-error
+
+Do not hard-code colors throughout the application.
+
+==================================================
+3. LANGUAGE & RTL
+=================
+
+Primary language:
+
+Persian / فارسی
+
+The website must be RTL-first.
+
+However, architect the application for future:
+
+* English
+* Arabic
+* Other languages
+
+Support both RTL and LTR properly.
+
+Do not simply mirror the UI mechanically.
+
+Typography, spacing, icons, navigation and layouts must feel natural for Persian users.
+
+==================================================
+4. MAIN NAVIGATION
+==================
+
+Desktop navigation:
+
+خانه
+فروشگاه
+کمربند
+اکسسوری
+بدلیجات
+جدیدها
+پرفروش‌ها
+تخفیف‌ها
+مجله مد
+همکاری / خرید عمده
+
+Include:
+
+* Search
+* Wishlist
+* Account
+* Cart
+
+Make "فروشگاه" the main commercial entry point.
+
+Make "همکاری / خرید عمده" clearly visible for B2B customers.
+
+==================================================
+5. MOBILE NAVIGATION
+====================
+
+Create a dedicated mobile navigation system.
+
+Bottom navigation:
+
+خانه
+فروشگاه
+جستجو
+علاقه‌مندی
+حساب
+
+Use sticky mobile UI where useful.
+
+Product pages should include a sticky:
+
+افزودن به سبد / خرید سریع
+
+Do not simply shrink the desktop UI.
+
+==================================================
+6. HOMEPAGE
+===========
+
+The homepage must be conversion-oriented.
+
+Recommended structure:
+
+1. Header
+2. Hero Campaign
+3. Main Categories
+4. New Arrivals
+5. Best Sellers
+6. Trending Today
+7. Shop The Look
+8. Featured Collection
+9. Fashion Daily
+10. Product Recommendations
+11. Customer Benefits
+12. Newsletter
+13. Social Proof / Instagram
+14. Footer
+
+Hero must support:
+
+* Image
+* Video
+* Title
+* Subtitle
+* CTA
+* Link
+* Start date
+* End date
+
+All hero campaigns must be manageable from the admin panel.
+
+==================================================
+7. PRODUCT CATEGORIES
+=====================
+
+Create dynamic categories.
+
+Example:
+
+کمربند
+
+* کمربند زنانه
+* کمربند پهن
+* کمربند باریک
+* کمربند مجلسی
+* کمربند چرمی
+* کمربند زنجیری
+* کمربند پارچه‌ای
+* کمربند فانتزی
+
+اکسسوری
+
+* گردنبند
+* دستبند
+* انگشتر
+* گوشواره
+* پابند
+* گیره مو
+* اکسسوری کیف
+
+بدلیجات
+
+* مینیمال
+* مجلسی
+* روزمره
+* استیل
+* ست‌ها
+
+The category system must be dynamic.
+
+Admins must be able to create:
+
+* Categories
+* Subcategories
+* Tags
+* Collections
+
+without modifying code.
+
+==================================================
+8. SHOP PAGE
+============
+
+Create a professional product listing page.
+
+Features:
+
+* Search
+* Filter
+* Sort
+* Pagination or infinite scroll
+* Wishlist
+* Quick View
+* Quick Add
+* Product comparison
+
+Filters:
+
+* Category
+* Price
+* Color
+* Material
+* Size
+* Style
+* Occasion
+* Availability
+* Discount
+* Brand
+* Collection
+
+Sorting:
+
+* Newest
+* Best Selling
+* Most Popular
+* Lowest Price
+* Highest Price
+* Biggest Discount
+* Recommended
+
+==================================================
+9. PRODUCT CARD
+===============
+
+Product cards must include:
+
+* Product image
+* Secondary image on hover
+* Wishlist
+* Badge
+* Product name
+* Price
+* Discount
+* Rating
+* Color variants
+* Quick Add
+
+Badges:
+
+NEW
+BEST SELLER
+TRENDING
+SALE
+LIMITED
+
+Create reusable ProductCard components.
+
+==================================================
+10. PRODUCT DETAILS PAGE
+========================
+
+Create a premium product page.
+
+Include:
+
+* Product gallery
+* Product video
+* Product name
+* Price
+* Discount
+* Stock status
+* SKU
+* Colors
+* Sizes
+* Material
+* Description
+* Specifications
+* Size guide
+* Shipping information
+* Return policy
+* Reviews
+* Questions
+* Related products
+* Complementary products
+* Recently viewed
+
+Actions:
+
+* Add to cart
+* Buy now
+* Wishlist
+* Share
+* Notify me
+
+==================================================
+11. BELT SIZE SYSTEM
+====================
+
+Create a dedicated belt size guide.
+
+Include:
+
+* Visual measurement guide
+* Waist measurement
+* Belt length
+* Recommended size
+* Size conversion
+
+Create a Belt Size Calculator.
+
+Example:
+
+User enters:
+
+82 cm waist
+
+System recommends:
+
+85 cm belt
+
+The size system must be configurable from the admin panel.
+
+==================================================
+12. CART
+========
+
+Cart must include:
+
+* Product
+* Variant
+* Quantity
+* Price
+* Discount
+* Subtotal
+* Shipping
+* Final total
+
+Add:
+
+* Coupon
+* Gift wrapping
+* Gift message
+* Product recommendations
+* Free shipping progress indicator
+
+Example:
+
+"برای ارسال رایگان ۳۵۰ هزار تومان دیگر خرید کنید."
+
+==================================================
+13. GUEST CHECKOUT
+==================
+
+Users must be able to purchase without creating an account.
+
+Flow:
+
+Product
+→ Cart
+→ Checkout
+→ Address
+→ Shipping
+→ Payment
+→ Confirmation
+
+Account creation should be optional.
+
+==================================================
+14. B2B / WHOLESALE
+===================
+
+Create a completely separate B2B experience.
+
+Main entry:
+
+"همکاری با ما"
+
+or
+
+"خرید عمده"
+
+Create:
+
+* Wholesale landing page
+* Wholesale application
+* Wholesale login
+* Wholesale dashboard
+* Wholesale catalog
+* Wholesale pricing
+* Bulk ordering
+* Order history
+* Reorder
+* Invoices
+* Partner discounts
+* Stock visibility
+
+==================================================
+15. WHOLESALE APPLICATION
+=========================
+
+Application form:
+
+* Full name
+* Store name
+* Phone
+* City
+* Address
+* Business type
+* Instagram
+* Website
+* Estimated monthly purchase
+* Additional information
+
+Application must require admin approval.
+
+==================================================
+16. WHOLESALE PRICING
+=====================
+
+Support multiple pricing tiers:
+
+RETAIL
+WHOLESALE
+VIP WHOLESALE
+DISTRIBUTOR
+SPECIAL PARTNER
+
+Each tier can have:
+
+* Fixed price
+* Percentage discount
+* Minimum order quantity
+* Special products
+* Special payment rules
+
+Example:
+
+Retail:
+450,000 تومان
+
+Wholesale:
+310,000 تومان
+
+Minimum:
+12 units
+
+==================================================
+17. BULK ORDER SYSTEM
+=====================
+
+Create a fast wholesale ordering interface.
+
+Example:
+
+Product | Color | Size | Quantity
+
+Belt 001 | Black | 85 | 5
+Belt 001 | Brown | 90 | 4
+Belt 002 | Black | 85 | 3
+
+Button:
+
+"افزودن همه به سبد عمده"
+
+Allow bulk quantity editing.
+
+==================================================
+18. WHOLESALE QUICK REORDER
+===========================
+
+Wholesale users must be able to reorder previous purchases.
+
+Example:
+
+Order #10284
+
+[سفارش مجدد]
+
+System must check current stock before adding products.
+
+==================================================
+19. FASHION DAILY
+=================
+
+Create a premium digital fashion newspaper / magazine.
+
+Main title:
+
+FASHION DAILY
+
+or
+
+DAILY EDIT
+
+The page should visually resemble a modern fashion newspaper rather than a traditional blog.
+
+Each day should have an edition.
+
+Example:
+
+FASHION DAILY
+18 SEP 2026
+
+TODAY'S EDITION
+
+Sections:
+
+* Main Story
+* Trending Now
+* Fashion News
+* Accessory Trends
+* Color of the Day
+* Style Inspiration
+* Product Spotlight
+* Editor's Pick
+
+==================================================
+20. DAILY FASHION CONTENT
+=========================
+
+Support content about:
+
+* Fashion news
+* Fashion trends
+* Accessory trends
+* Belt trends
+* Jewelry trends
+* Color trends
+* Seasonal trends
+* Street style
+* Celebrity style
+* Fashion Week
+* Runway trends
+* New collections
+* Styling tips
+* Beauty trends
+* Popular products
+* Emerging fashion movements
+
+The system must support daily publishing.
+
+==================================================
+21. CONTENT → COMMERCE
+======================
+
+This is extremely important.
+
+Every article or trend should be able to connect to products.
+
+Example:
+
+Article:
+
+"5 ترند کمربند برای پاییز"
+
+Inside article:
+
+SHOP THE TREND
+
+Show relevant products.
+
+Also support product cards inside editorial articles.
+
+Every editorial page should provide a natural path toward shopping.
+
+==================================================
+22. TRENDING TODAY
+==================
+
+Create:
+
+TRENDING TODAY
+
+Examples:
+
+* Trending Belt
+* Trending Color
+* Trending Jewelry
+* Trending Material
+* Trending Style
+* Trending Collection
+
+Each trend should connect directly to products.
+
+==================================================
+23. STYLE GUIDE
+===============
+
+Create an educational fashion section.
+
+Examples:
+
+* How to style a belt
+* How to choose belt size
+* How to match belt with shoes
+* Gold vs silver jewelry
+* How to layer jewelry
+* How to choose accessories
+* How to style accessories
+* Accessories for different occasions
+
+This section must be optimized for SEO.
+
+==================================================
+24. SHOP THE LOOK
+=================
+
+Create complete looks.
+
+Example:
+
+THE BLACK LOOK
+
+* Belt
+* Necklace
+* Bracelet
+* Bag
+
+Allow:
+
+"افزودن کل ست به سبد"
+
+Also allow individual product selection.
+
+==================================================
+25. COLLECTION SYSTEM
+=====================
+
+Create dynamic collections.
+
+Examples:
+
+* Autumn Collection
+* Minimal Collection
+* Party Collection
+* Office Style
+* Street Style
+* Gold Collection
+* Black Collection
+
+Each collection must have a dedicated landing page.
+
+==================================================
+26. SEARCH
+==========
+
+Create a powerful global search.
+
+Support:
+
+* Product search
+* Category search
+* Article search
+* Trend search
+* Style guide search
+
+Autocomplete suggestions should appear while typing.
+
+Example:
+
+User searches:
+
+"کمربند مشکی"
+
+Show:
+
+Products
+Articles
+Trends
+Guides
+
+==================================================
+27. WISHLIST
+============
+
+Support:
+
+* Add/remove wishlist
+* Price drop notification
+* Back-in-stock notification
+* Recently viewed
+* Share wishlist
+
+==================================================
+28. PRODUCT COMPARISON
+======================
+
+Allow users to compare products.
+
+Compare:
+
+* Price
+* Material
+* Color
+* Size
+* Width
+* Buckle
+* Style
+* Rating
+
+==================================================
+29. REVIEWS
+===========
+
+Reviews should support:
+
+* Rating
+* Text
+* Images
+* Verified purchase
+* Admin moderation
+
+==================================================
+30. NOTIFICATION SYSTEM
+=======================
+
+Support:
+
+* Order updates
+* Payment updates
+* Shipping updates
+* Back in stock
+* Price drops
+* New collection
+* Wholesale notifications
+* Promotional campaigns
+
+Architecture should support:
+
+* SMS
+* Email
+* Web notifications
+* Push notifications
+
+==================================================
+31. CUSTOMER ACCOUNT
+====================
+
+Customer dashboard:
+
+* Overview
+* Orders
+* Wishlist
+* Addresses
+* Wallet
+* Coupons
+* Loyalty points
+* Notifications
+* Recently viewed
+* Reviews
+* Support
+* Personal information
+
+==================================================
+32. LOYALTY PROGRAM
+===================
+
+Create a customer loyalty system.
+
+Levels:
+
+BRONZE
+SILVER
+GOLD
+VIP
+
+Points can be earned through:
+
+* Purchases
+* Reviews
+* Referrals
+* Engagement
+
+Rewards:
+
+* Coupons
+* Discounts
+* Birthday rewards
+* Exclusive offers
+* Early access
+* Special collections
+
+All rules must be configurable from admin.
+
+==================================================
+33. REFERRAL SYSTEM
+===================
+
+Each customer can have a referral link.
+
+Track:
+
+* Referral clicks
+* Signups
+* Purchases
+* Rewards
+
+Rewards must be configurable.
+
+==================================================
+34. GIFT FEATURES
+=================
+
+Checkout should support:
+
+* Gift wrapping
+* Gift message
+* Gift card
+* Special packaging
+
+==================================================
+35. MARKETING AUTOMATION
+========================
+
+Prepare architecture for:
+
+* Abandoned cart
+* Welcome campaign
+* First purchase
+* Win-back campaign
+* Birthday campaign
+* Price drop
+* Back in stock
+* New collection
+* Promotional campaigns
+
+==================================================
+36. FLASH SALE
+==============
+
+Create a real Flash Sale system.
+
+Features:
+
+* Start date/time
+* End date/time
+* Products
+* Sale price
+* Stock limit
+* Countdown
+
+Countdown must be server-controlled.
+
+==================================================
+37. NEW DROP
+============
+
+Create a New Drop system.
+
+Example:
+
+NEW DROP
+AUTUMN 2026
+
+Display:
+
+* New products
+* Editorial introduction
+* Campaign imagery
+* Shop collection
+
+==================================================
+38. PRE-ORDER
+=============
+
+Support:
+
+COMING SOON
+
+NOTIFY ME
+
+PRE-ORDER
+
+Products can have configurable release dates.
+
+==================================================
+39. PERSONALIZATION
+===================
+
+Create a recommendation architecture based on:
+
+* Viewed products
+* Purchased products
+* Wishlist
+* Categories
+* Price range
+* User behavior
+
+Sections:
+
+"مخصوص شما"
+
+"شاید این‌ها را بپسندید"
+
+"محصولات مشابه"
+
+"محصولات مکمل"
+
+==================================================
+40. AI READY ARCHITECTURE
+=========================
+
+Prepare architecture for future AI features:
+
+AI Style Assistant
+AI Product Recommendation
+AI Style Matching
+Natural Language Product Search
+
+Example:
+
+User:
+
+"یه کمربند برای استایل مشکی مجلسی میخوام"
+
+System can return relevant products.
+
+Do not hard-code AI functionality if no AI provider is available.
+Create clean integration points for future implementation.
+
+==================================================
+41. ADMIN DASHBOARD
+===================
+
+Create a professional admin dashboard.
+
+Dashboard metrics:
+
+* Today's sales
+* Revenue
+* Orders
+* Customers
+* Wholesale orders
+* Average order value
+* Conversion rate
+* Top products
+* Top categories
+* Low stock
+* Out of stock
+* Cart abandonment
+* Repeat customers
+
+Use clear data visualization.
+
+==================================================
+42. PRODUCT MANAGEMENT
+======================
+
+Admin must be able to:
+
+* Create product
+* Edit product
+* Delete product
+* Duplicate product
+* Manage variants
+* Manage sizes
+* Manage colors
+* Upload images
+* Upload videos
+* Set price
+* Set discount
+* Set stock
+* Set SKU
+* Set barcode
+* Set SEO metadata
+* Set related products
+* Set complementary products
+* Set upsell products
+* Set cross-sell products
+
+==================================================
+43. INVENTORY
+=============
+
+Inventory must be variant-based.
+
+Example:
+
+Black / 85
+Black / 90
+Black / 95
+Brown / 85
+Brown / 90
+
+Each variant must have independent stock.
+
+Support:
+
+* Low stock
+* Out of stock
+* Fast selling
+* Restock alerts
+
+==================================================
+44. COUPON SYSTEM
+=================
+
+Support:
+
+* Percentage discount
+* Fixed discount
+* First-order coupon
+* Category coupon
+* Product coupon
+* Wholesale coupon
+* Minimum order
+* Maximum discount
+* Expiration date
+* Usage limit
+* Per-user limit
+
+==================================================
+45. ORDER MANAGEMENT
+====================
+
+Order statuses:
+
+Pending
+Paid
+Processing
+Packed
+Shipped
+Delivered
+Cancelled
+Returned
+Refunded
+
+Admin must be able to update status and record internal notes.
+
+==================================================
+46. SHIPPING
+============
+
+Create configurable shipping architecture.
+
+Support:
+
+* Shipping methods
+* Shipping cost
+* Free shipping threshold
+* City-based shipping
+* Weight-based shipping
+* Delivery estimates
+
+==================================================
+47. RETURNS
+===========
+
+Create return management.
+
+Customer:
+
+* Select order
+* Select product
+* Select reason
+* Submit request
+* Track status
+
+Admin:
+
+* Approve/reject
+* Add notes
+* Process refund
+
+==================================================
+48. CUSTOMER SUPPORT
+====================
+
+Support:
+
+* FAQ
+* Contact form
+* Ticket system
+* Live chat architecture
+
+Prepare architecture for future integrations with external messaging platforms.
+
+==================================================
+49. SOCIAL COMMERCE
+===================
+
+Include:
+
+* Instagram-style product gallery
+* User-generated content
+* Social proof
+* Product tagging architecture
+
+==================================================
+50. NEWSLETTER
+==============
+
+Create:
+
+FASHION LETTER
+
+Allow users to subscribe to:
+
+* Fashion Daily
+* New products
+* Exclusive offers
+* Trend reports
+* New collections
+
+==================================================
+51. SEO
+=======
+
+The website must be SEO-first.
+
+Every:
+
+* Product
+* Category
+* Collection
+* Article
+* Trend
+* Guide
+
+must support:
+
+* SEO title
+* Meta description
+* Slug
+* Canonical URL
+* OG image
+* Structured data
+
+Support schema types where appropriate:
+
+* Product
+* Article
+* Breadcrumb
+* Organization
+* FAQ
+* Review
+
+Create clean SEO-friendly URLs.
+
+==================================================
+52. CONTENT SEO
+===============
+
+Fashion Daily and Style Guide must become organic traffic engines.
+
+Support:
+
+* Internal linking
+* Related products
+* Related articles
+* Author
+* Publish date
+* Updated date
+* Reading time
+* Tags
+* Categories
+
+==================================================
+53. ANALYTICS
+=============
+
+Track:
+
+* Product views
+* Add to cart
+* Checkout
+* Purchase
+* Search
+* Wishlist
+* Article views
+* Trend views
+* Wholesale applications
+* Wholesale purchases
+* Campaign performance
+
+==================================================
+54. BUSINESS INTELLIGENCE
+=========================
+
+Admin reports:
+
+* Best-selling products
+* Worst-selling products
+* Best categories
+* Revenue
+* Conversion rate
+* Cart abandonment
+* Customer lifetime value
+* Repeat purchase rate
+* Average order value
+* Retail revenue
+* Wholesale revenue
+
+==================================================
+55. SECURITY
+============
+
+Implement secure architecture:
+
+* Authentication
+* Authorization
+* Role-based access control
+* Password hashing
+* Secure sessions
+* Input validation
+* Rate limiting
+* XSS protection
+* CSRF protection
+* Audit logs
+
+Never expose sensitive information to the client.
+
+==================================================
+56. ADMIN ROLES
+===============
+
+Support:
+
+SUPER ADMIN
+MANAGER
+CONTENT MANAGER
+PRODUCT MANAGER
+ORDER MANAGER
+SUPPORT
+WAREHOUSE
+MARKETING
+
+Permissions must be configurable.
+
+==================================================
+57. DATABASE
+============
+
+Design a normalized and scalable database.
+
+Core entities:
+
+Users
+Roles
+Permissions
+Products
+ProductVariants
+Categories
+Collections
+Tags
+Inventory
+Orders
+OrderItems
+Payments
+Shipping
+Addresses
+Reviews
+Wishlists
+Coupons
+LoyaltyPoints
+WholesaleAccounts
+WholesalePrices
+WholesaleOrders
+Articles
+Trends
+FashionDailyEditions
+Notifications
+Tickets
+Campaigns
+Analytics
+Referrals
+GiftCards
+
+==================================================
+58. PERFORMANCE
+===============
+
+Optimize for:
+
+* Fast loading
+* Mobile performance
+* Core Web Vitals
+* Image optimization
+* Lazy loading
+* Caching
+* Code splitting
+* WebP / AVIF
+* Efficient API requests
+
+Avoid unnecessary JavaScript.
+
+==================================================
+59. PWA
+=======
+
+Prepare the site for Progressive Web App functionality.
+
+Support architecture for:
+
+* Installable website
+* Push notifications
+* Offline shell
+* App-like navigation
+
+==================================================
+60. ACCESSIBILITY
+=================
+
+Support:
+
+* Keyboard navigation
+* Proper focus states
+* ARIA
+* Semantic HTML
+* Good contrast
+* Readable typography
+* Screen reader compatibility
+
+==================================================
+61. DARK / LIGHT MODE
+=====================
+
+Support:
+
+Light
+Dark
+System
+
+Persist user preference.
+
+==================================================
+62. EMPTY STATES
+================
+
+Create polished empty states for:
+
+* Empty cart
+* Empty wishlist
+* No orders
+* No search results
+* No notifications
+* No reviews
+
+==================================================
+63. LOADING STATES
+==================
+
+Create skeleton loading states for:
+
+* Products
+* Categories
+* Articles
+* Dashboard
+* Search
+* Product details
+
+==================================================
+64. ERROR STATES
+================
+
+Design clear UX for:
+
+* Network error
+* Payment error
+* Product unavailable
+* Session expired
+* Server error
+* Invalid coupon
+* Out of stock
+
+==================================================
+65. RESPONSIVE DESIGN
+=====================
+
+The website must work perfectly on:
+
+* Mobile
+* Tablet
+* Laptop
+* Desktop
+* Large screens
+
+Design mobile-first.
+
+Do not simply scale desktop layouts down.
+
+==================================================
+66. COMPONENT ARCHITECTURE
+==========================
+
+Use reusable components.
+
+Examples:
+
+Header
+Navigation
+MobileNavigation
+Search
+ProductCard
+ProductGallery
+Price
+Badge
+Filter
+Sort
+Modal
+Drawer
+Toast
+Button
+Input
+Select
+Tabs
+Accordion
+ArticleCard
+TrendCard
+CollectionCard
+ReviewCard
+CartItem
+CheckoutForm
+DashboardCard
+
+Do not create huge monolithic components.
+
+==================================================
+67. ARCHITECTURE
+================
+
+Before implementation, define:
+
+1. Sitemap
+2. Information architecture
+3. User flows
+4. Design system
+5. Component system
+6. Database schema
+7. API architecture
+8. Authentication architecture
+9. B2C architecture
+10. B2B architecture
+11. Fashion Daily architecture
+12. Admin architecture
+13. SEO architecture
+14. Analytics architecture
+
+Then implement systematically.
+
+==================================================
+68. CRITICAL UX PRINCIPLE
+=========================
+
+Shopping is the PRIMARY FUNCTION.
+
+The hierarchy must be:
+
+SHOPPING
+↓
+WHOLESALE
+↓
+CONTENT
+
+However, Fashion Daily and editorial content should continuously guide users toward relevant products.
+
+Never make users struggle to find products.
+
+Every major content experience should have a natural commercial path.
+
+==================================================
+69. FINAL PRODUCT VISION
+========================
+
+Do NOT build a website that looks like:
+
+"just another belt store."
+
+Build a complete:
+
+FASHION ACCESSORIES COMMERCE PLATFORM
+
+with:
+
+SHOP
++
+WHOLESALE
++
+FASHION DAILY
++
+TRENDING
++
+STYLE GUIDE
++
+CRM
++
+LOYALTY
++
+PERSONALIZATION
++
+CONTENT COMMERCE
+
+The final website should feel like a real premium fashion-tech startup capable of scaling into:
+
+* Mobile application
+* International sales
+* Multi-currency
+* Multiple warehouses
+* Marketplace
+* AI shopping assistant
+* Advanced recommendation engine
+* Multiple languages
+* Large B2B network
+
+The final result must be polished, commercially useful, scalable, fast, accessible, SEO-friendly and production-ready.
+
+Do not stop at a visual mockup.
+
+Build the complete functional architecture and UI system.

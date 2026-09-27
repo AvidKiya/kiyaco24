@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ژیوار | استایل تو، روایت تو — پوشاک، اکسسوری و لباس زیر</title>
+<style>
+  :root{
+    --cream:#FAF7F4;
+    --cream-2:#F3EDE7;
+    --plum:#3B2A34;
+    --plum-soft:#5A4350;
+    --rose:#C49A9A;
+    --rose-deep:#A97B7B;
+    --gold:#C9A96A;
+    --ink:#2B2024;
+    --muted:#8A7B80;
+    --white:#FFFFFF;
+    --shadow:0 10px 40px rgba(59,42,52,.10);
+    --radius:22px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Vazirmatn', Tahoma, 'Iranian Sans', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+  ::selection{background:var(--rose);color:#fff}
+
+  /* ===== Announcement bar ===== */
+  .announce{
+    background:var(--plum);
+    color:#EFE3E0;
+    font-size:13px;
+    text-align:center;
+    padding:9px 16px;
+    letter-spacing:.2px;
+  }
+  .announce b{color:var(--gold)}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,247,244,.85);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(59,42,52,.07);
+    transition:box-shadow .3s;
+  }
+  header.scrolled{box-shadow:0 4px 30px rgba(59,42,52,.08)}
+  .nav{
+    max-width:1240px;margin:auto;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:28px;padding:16px 24px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:800;color:var(--plum)}
+  .logo .mark{
+    width:38px;height:38px;border-radius:12px;
+    background:linear-gradient(135deg,var(--plum),var(--rose-deep));
+    display:grid;place-items:center;color:#fff;font-size:19px;font-weight:800;
+    box-shadow:0 4px 14px rgba(169,123,123,.35);
+  }
+  .logo small{display:block;font-size:10px;font-weight:400;color:var(--muted);letter-spacing:4px;margin-top:-4px}
+  .nav-links{display:flex;gap:26px;font-size:15px;font-weight:500;color:var(--plum-soft)}
+  .nav-links a{position:relative;padding:4px 0;transition:color .2s}
+  .nav-links a::after{
+    content:'';position:absolute;bottom:0;right:0;width:0;height:2px;
+    background:var(--rose-deep);transition:width .25s;
+  }
+  .nav-links a:hover{color:var(--plum)}
+  .nav-links a:hover::after{width:100%}
+  .nav-actions{display:flex;align-items:center;gap:8px}
+  .icon-btn{
+    width:42px;height:42px;border-radius:50%;
+    display:grid;place-items:center;font-size:19px;
+    color:var(--plum);transition:background .2s, transform .2s;
+    position:relative;
+  }
+  .icon-btn:hover{background:var(--cream-2);transform:translateY(-2px)}
+  .badge{
+    position:absolute;top:2px;left:2px;
+    min-width:18px;height:18px;border-radius:9px;
+    background:var(--rose-deep);color:#fff;
+    font-size:11px;font-weight:700;
+    display:grid;place-items:center;padding:0 4px;
+  }
+  .menu-btn{display:none}
+
+  /* ===== Hero ===== */
+  .hero{
+    max-width:1240px;margin:auto;
+    display:grid;grid-template-columns:1.05fr .95fr;
+    gap:60px;align-items:center;
+    padding:70px 24px 80px;
+  }
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--white);border:1px solid rgba(196,154,154,.35);
+    color:var(--rose-deep);font-size:13px;font-weight:600;
+    padding:8px 16px;border-radius:100px;margin-bottom:22px;
+    box-shadow:0 4px 16px rgba(196,154,154,.15);
+  }
+  .hero h1{
+    font-size:clamp(34px,5vw,56px);
+    font-weight:800;line-height:1.25;color:var(--plum);
+    letter-spacing:-.5px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(120deg,var(--rose-deep),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.sub{
+    font-size:17px;color:var(--muted);margin:20px 0 32px;max-width:480px;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 30px;border-radius:100px;
+    font-size:15px;font-weight:700;transition:.25s;
+  }
+  .btn-primary{
+    background:var(--plum);color:#fff;
+    box-shadow:0 10px 30px rgba(59,42,52,.28);
+  }
+  .btn-primary:hover{background:var(--plum-soft);transform:translateY(-3px);box-shadow:0 14px 36px rgba(59,42,52,.34)}
+  .btn-ghost{
+    background:var(--white);color:var(--plum);
+    border:1.5px solid rgba(59,42,52,.15);
+  }
+  .btn-ghost:hover{border-color:var(--rose-deep);color:var(--rose-deep);transform:translateY(-3px)}
+  .hero-stats{display:flex;gap:36px;margin-top:44px}
+  .stat b{display:block;font-size:26px;font-weight:800;color:var(--plum)}
+  .stat span{font-size:13px;color:var(--muted)}
+  .hero-visual{position:relative}
+  .hero-visual .frame{
+    border-radius:200px 200px var(--radius) var(--radius);
+    overflow:hidden;box-shadow:var(--shadow);
+    aspect-ratio:4/5;
+  }
+  .hero-visual .frame img{width:100%;height:100%;object-fit:cover}
+  .float-card{
+    position:absolute;background:var(--white);
+    border-radius:18px;padding:14px 18px;
+    box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:12px;
+    animation:floaty 5s ease-in-out infinite;
+  }
+  .float-card .fc-icon{
+    width:42px;height:42px;border-radius:12px;
+    display:grid;place-items:center;font-size:20px;
+    background:linear-gradient(135deg,#F7E8E8,#EFDFC9);
+  }
+  .float-card b{font-size:14px;color:var(--plum);display:block}
+  .float-card span{font-size:12px;color:var(--muted)}
+  .fc-1{top:8%;right:-24px}
+  .fc-2{bottom:10%;left:-24px;animation-delay:2.5s}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  /* ===== Section shared ===== */
+  section{padding:84px 24px}
+  .wrap{max-width:1240px;margin:auto}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 52px}
+  .sec-tag{
+    font-size:13px;font-weight:700;color:var(--rose-deep);
+    letter-spacing:2px;margin-bottom:10px;
+  }
+  .sec-head h2{font-size:clamp(26px,3.4vw,40px);font-weight:800;color:var(--plum);line-height:1.3}
+  .sec-head p{color:var(--muted);margin-top:14px;font-size:16px}
+
+  /* ===== Categories ===== */
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .cat{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    aspect-ratio:3/3.6;cursor:pointer;group:cat;
+    box-shadow:0 6px 24px rgba(59,42,52,.08);
+  }
+  .cat img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .cat:hover img{transform:scale(1.08)}
+  .cat .veil{
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(43,32,36,.72) 0%,rgba(43,32,36,.15) 45%,transparent 70%);
+  }
+  .cat .info{position:absolute;bottom:0;right:0;left:0;padding:24px;color:#fff}
+  .cat .info h3{font-size:20px;font-weight:800}
+  .cat .info span{font-size:13px;opacity:.85}
+  .cat .go{
+    position:absolute;top:18px;left:18px;
+    width:40px;height:40px;border-radius:50%;
+    background:rgba(255,255,255,.92);color:var(--plum);
+    display:grid;place-items:center;font-size:17px;
+    transform:scale(0) rotate(-45deg);transition:.35s;
+  }
+  .cat:hover .go{transform:scale(1) rotate(0)}
+
+  /* ===== AI Stylist ===== */
+  .ai{background:var(--plum);border-radius:36px;margin:0 24px;color:#F5EDE9;position:relative;overflow:hidden}
+  .ai::before{
+    content:'';position:absolute;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(196,154,154,.28),transparent 70%);
+    top:-160px;left:-120px;
+  }
+  .ai-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+    max-width:1160px;margin:auto;position:relative;
+  }
+  .ai-copy .sec-tag{color:var(--gold)}
+  .ai-copy h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;line-height:1.35;color:#fff}
+  .ai-copy > p{color:#D8C8C3;margin:16px 0 28px;font-size:16px}
+  .ai-feats{list-style:none;display:grid;gap:14px;margin-bottom:34px}
+  .ai-feats li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#EADDD8}
+  .ai-feats .tick{
+    flex:none;width:26px;height:26px;border-radius:50%;
+    background:rgba(201,169,106,.18);color:var(--gold);
+    display:grid;place-items:center;font-size:13px;margin-top:2px;
+  }
+  /* phone + chat */
+  .phone{
+    width:min(330px,100%);margin:auto;
+    background:#fff;border-radius:40px;padding:12px;
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+    border:1px solid rgba(255,255,255,.1);
+  }
+  .phone-screen{
+    background:var(--cream);border-radius:30px;overflow:hidden;
+    display:flex;flex-direction:column;height:520px;
+  }
+  .chat-head{
+    background:var(--white);padding:14px 16px;
+    display:flex;align-items:center;gap:10px;
+    border-bottom:1px solid #EEE4DE;
+  }
+  .chat-head .avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg,var(--plum),var(--rose-deep));
+    display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;
+  }
+  .chat-head b{font-size:14px;color:var(--plum);display:block}
+  .chat-head .online{font-size:11px;color:#3FA46A;display:flex;align-items:center;gap:5px}
+  .chat-head .online::before{content:'';width:7px;height:7px;border-radius:50%;background:#3FA46A}
+  .chat-body{
+    flex:1;padding:16px;display:flex;flex-direction:column;gap:12px;
+    overflow:hidden;font-size:13.5px;
+  }
+  .msg{max-width:82%;padding:11px 15px;border-radius:18px;line-height:1.65;opacity:0;transform:translateY(8px);transition:.4s}
+  .msg.show{opacity:1;transform:none}
+  .msg.bot{background:var(--white);color:var(--ink);border-bottom-right-radius:6px;align-self:flex-start;box-shadow:0 2px 10px rgba(59,42,52,.06)}
+  .msg.user{background:var(--plum);color:#fff;border-bottom-left-radius:6px;align-self:flex-end}
+  .msg .prod{
+    margin-top:10px;background:var(--cream-2);border-radius:14px;padding:10px;
+    display:flex;gap:10px;align-items:center;
+  }
+  .msg .prod .thumb{width:44px;height:54px;border-radius:10px;flex:none}
+  .msg .prod b{font-size:12.5px;color:var(--plum);display:block}
+  .msg .prod span{font-size:11.5px;color:var(--rose-deep);font-weight:700}
+  .msg .prod small{font-size:10.5px;color:var(--muted)}
+  .typing{display:flex;gap:5px;align-self:flex-start;background:var(--white);padding:13px 16px;border-radius:18px;border-bottom-right-radius:6px;box-shadow:0 2px 10px rgba(59,42,52,.06)}
+  .typing i{width:7px;height:7px;border-radius:50%;background:var(--rose);animation:blink 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.2s}
+  .typing i:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+  .chat-input{
+    margin:0 12px 12px;background:var(--white);border-radius:100px;
+    padding:11px 18px;font-size:12.5px;color:var(--muted);
+    display:flex;justify-content:space-between;align-items:center;
+    border:1px solid #EEE4DE;
+  }
+  .chat-input .send{
+    width:30px;height:30px;border-radius:50%;background:var(--plum);color:#fff;
+    display:grid;place-items:center;font-size:13px;
+  }
+
+  /* ===== Products ===== */
+  .tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px;flex-wrap:wrap}
+  .tab{
+    padding:10px 22px;border-radius:100px;font-size:14px;font-weight:600;
+    background:var(--white);color:var(--muted);border:1px solid rgba(59,42,52,.1);transition:.25s;
+  }
+  .tab.active,.tab:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+  .products{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .card{
+    background:var(--white);border-radius:var(--radius);overflow:hidden;
+    box-shadow:0 4px 20px rgba(59,42,52,.06);
+    transition:transform .35s, box-shadow .35s;
+  }
+  .card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .card .thumb{position:relative;aspect-ratio:4/4.6;overflow:hidden}
+  .card .thumb .ph{
+    width:100%;height:100%;display:grid;place-items:center;
+    font-size:15px;font-weight:700;color:rgba(255,255,255,.92);
+    letter-spacing:1px;transition:transform .6s;
+  }
+  .card:hover .ph{transform:scale(1.07)}
+  .tag{
+    position:absolute;top:14px;right:14px;
+    background:var(--white);color:var(--plum);
+    font-size:11.5px;font-weight:700;padding:6px 12px;border-radius:100px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+  }
+  .tag.hot{background:var(--rose-deep);color:#fff}
+  .fav{
+    position:absolute;top:12px;left:12px;width:36px;height:36px;border-radius:50%;
+    background:rgba(255,255,255,.92);display:grid;place-items:center;font-size:15px;
+    opacity:0;transform:scale(.8);transition:.3s;color:var(--plum);
+  }
+  .card:hover .fav{opacity:1;transform:scale(1)}
+  .fav.liked{color:var(--rose-deep)}
+  .card .body{padding:18px}
+  .card .body .cat-name{font-size:12px;color:var(--muted)}
+  .card .body h4{font-size:15.5px;font-weight:700;color:var(--plum);margin:5px 0 10px;min-height:46px}
+  .price{display:flex;align-items:center;gap:10px}
+  .price b{font-size:16px;color:var(--plum)}
+  .price del{font-size:13px;color:var(--muted)}
+  .price .off{font-size:12px;color:#fff;background:var(--rose-deep);padding:3px 9px;border-radius:8px;font-weight:700}
+  .add{
+    margin-top:14px;width:100%;padding:12px;border-radius:14px;
+    background:var(--cream-2);color:var(--plum);font-size:14px;font-weight:700;
+    transition:.25s;display:flex;align-items:center;justify-content:center;gap:8px;
+  }
+  .add:hover{background:var(--plum);color:#fff}
+
+  /* ===== Telegram ===== */
+  .tg-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .tg-card{
+    border-radius:28px;padding:40px 36px;position:relative;overflow:hidden;
+    transition:transform .35s;
+  }
+  .tg-card:hover{transform:translateY(-6px)}
+  .tg-channel{background:linear-gradient(160deg,#2AABEE,#229ED9);color:#fff}
+  .tg-bot{background:var(--white);border:1px solid rgba(59,42,52,.08);box-shadow:var(--shadow)}
+  .tg-card .tg-icon{
+    width:58px;height:58px;border-radius:18px;display:grid;place-items:center;
+    font-size:28px;margin-bottom:20px;background:rgba(255,255,255,.2);
+  }
+  .tg-bot .tg-icon{background:#EAF6FD}
+  .tg-card h3{font-size:23px;font-weight:800;margin-bottom:10px}
+  .tg-card p{font-size:14.5px;opacity:.92;margin-bottom:22px}
+  .tg-list{list-style:none;display:grid;gap:11px;margin-bottom:26px}
+  .tg-list li{display:flex;gap:10px;font-size:14px;align-items:center}
+  .tg-list li::before{content:'✓';flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;background:rgba(255,255,255,.22)}
+  .tg-bot .tg-list li::before{background:#E4F3FB;color:#229ED9}
+  .tg-btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 26px;border-radius:100px;font-size:14.5px;font-weight:700;transition:.25s;
+  }
+  .tg-channel .tg-btn{background:#fff;color:#229ED9}
+  .tg-channel .tg-btn:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.2)}
+  .tg-bot .tg-btn{background:#229ED9;color:#fff}
+  .tg-bot .tg-btn:hover{background:#1b8ec4;transform:translateY(-3px)}
+  .tg-count{display:flex;align-items:center;gap:8px;font-size:13px;opacity:.9;margin-bottom:18px}
+
+  /* ===== Install / PWA ===== */
+  .install{
+    background:var(--cream-2);border-radius:32px;
+    text-align:center;padding:60px 24px;
+  }
+  .install h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--plum)}
+  .install > p{color:var(--muted);max-width:520px;margin:14px auto 36px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:auto}
+  .step{background:var(--white);border-radius:20px;padding:28px 22px}
+  .step .n{
+    width:44px;height:44px;border-radius:14px;margin:0 auto 14px;
+    background:linear-gradient(135deg,var(--rose),var(--gold));
+    display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;
+  }
+  .step b{display:block;color:var(--plum);font-size:15.5px;margin-bottom:6px}
+  .step span{font-size:13.5px;color:var(--muted)}
+
+  /* ===== Footer ===== */
+  footer{background:var(--plum);color:#D8C8C3;margin-top:84px}
+  .foot-grid{
+    max-width:1240px;margin:auto;padding:64px 24px 40px;
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;
+  }
+  .foot-brand .logo{color:#fff}
+  .foot-brand .logo small{color:#B9A6AB}
+  .foot-brand p{font-size:14px;margin-top:16px;line-height:1.9;max-width:300px}
+  footer h5{color:#fff;font-size:15.5px;font-weight:700;margin-bottom:18px}
+  .foot-links{list-style:none;display:grid;gap:11px;font-size:14px}
+  .foot-links a{transition:.2s}
+  .foot-links a:hover{color:var(--gold);padding-right:5px}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:22px 24px;text-align:center;font-size:13px;color:#B9A6AB;
+    display:flex;flex-direction:column;gap:10px;align-items:center;
+  }
+  .pay{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .pay span{
+    background:rgba(255,255,255,.08);padding:7px 14px;border-radius:10px;font-size:12px;
+  }
+
+  /* ===== Toast ===== */
+  .toast{
+    position:fixed;bottom:28px;right:50%;transform:translate(50%,80px);
+    background:var(--plum);color:#fff;padding:14px 26px;border-radius:100px;
+    font-size:14px;font-weight:600;box-shadow:0 14px 40px rgba(0,0,0,.25);
+    opacity:0;transition:.4s;z-index:200;pointer-events:none;
+  }
+  .toast.show{opacity:1;transform:translate(50%,0)}
+
+  /* ===== Reveal ===== */
+  .reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ===== Responsive ===== */
+  @media(max-width:1024px){
+    .hero{grid-template-columns:1fr;gap:40px}
+    .hero-visual{max-width:480px;margin:auto}
+    .cats{grid-template-columns:repeat(2,1fr)}
+    .ai-grid{grid-template-columns:1fr}
+    .ai-copy{text-align:center}
+    .ai-feats li{text-align:right}
+    .products{grid-template-columns:repeat(2,1fr)}
+    .tg-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:720px){
+    .nav-links{display:none}
+    .menu-btn{display:grid}
+    section{padding:60px 18px}
+    .hero{padding:48px 18px 60px}
+    .hero-stats{gap:22px}
+    .fc-1{right:-8px}.fc-2{left:-8px}
+    .products{grid-template-columns:repeat(2,1fr);gap:14px}
+    .card .body{padding:13px}
+    .card .body h4{font-size:14px;min-height:42px}
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+    .ai{border-radius:26px;margin:0 14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announce">🚚 ارسال رایگان برای سفارش‌های بالای <b>۵۰۰ هزار تومان</b> • عضویت در کانال ژیوار: <b>@ZhevarStyle</b></div>
+
+<!-- Header -->
+<header id="header">
+  <nav class="nav">
+    <a href="#" class="logo">
+      <span class="mark">ژ</span>
+      <span>ژیوار<small>ZHEVAR</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#cats">دسته‌بندی‌ها</a>
+      <a href="#ai">مشاور هوشمند</a>
+      <a href="#products">جدیدترین‌ها</a>
+      <a href="#tg">تلگرام</a>
+      <a href="#install">نصب اپ</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" title="جستجو">🔍</button>
+      <button class="icon-btn" title="علاقه‌مندی‌ها">🤍<span class="badge">۳</span></button>
+      <button class="icon-btn" title="سبد خرید">🛍️<span class="badge" id="cartCount">۲</span></button>
+      <button class="icon-btn menu-btn" title="منو">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" style="padding-top:48px">
+  <div>
+    <span class="hero-eyebrow">✨ مشاور استایل هوش مصنوعی، رایگان برای همه</span>
+    <h1>هر روز، <em>بهترین نسخه</em> خودت رو بپوش</h1>
+    <p class="sub">پوشاک، اکسسوری و لباس زیر — همه در یک جا. با مشاور هوشمند ژیوار، ست مناسب سلیقه، اندام و بودجه‌ات را در چند ثانیه پیدا کن.</p>
+    <div class="hero-cta">
+      <a href="#ai" class="btn btn-primary">🤖 مشاوره استایل با AI</a>
+      <a href="#cats" class="btn btn-ghost">دیدن کالکشن‌ها ←</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>۲٬۴۰۰+</b><span>محصول منتخب</span></div>
+      <div class="stat"><b>۴.۹/۵</b><span>امتیاز مشتریان</span></div>
+      <div class="stat"><b>۷ روز</b><span>مرجوعی آسان</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="frame"><img src="assets/hero.jpg" alt="مدل ژیوار"></div>
+    <div class="float-card fc-1">
+      <div class="fc-icon">📏</div>
+      <div><b>سایز پیشنهادی: M</b><span>۹۵٪ تطابق با اندازه‌های تو</span></div>
+    </div>
+    <div class="float-card fc-2">
+      <div class="fc-icon">⚡</div>
+      <div><b>ارسال فوری</b><span>تهران ۲۴ ساعته</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="cats">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">کالکشن‌ها</div>
+      <h2>دنبال چه چیزی می‌گردی؟</h2>
+      <p>از پیراهن مهمونی تا اکسسوری مینیمال — هر استایلی، اینجا جایگاهی دارد.</p>
+    </div>
+    <div class="cats">
+      <a class="cat reveal" href="#">
+        <img src="assets/cat-clothing.jpg" alt="پوشاک">
+        <div class="veil"></div><div class="go">↗</div>
+        <div class="info"><h3>پوشاک</h3><span>۸۶۰ مدل</span></div>
+      </a>
+      <a class="cat reveal" href="#">
+        <img src="assets/cat-accessories.jpg" alt="اکسسوری">
+        <div class="veil"></div><div class="go">↗</div>
+        <div class="info"><h3>اکسسوری</h3><span>۵۴۰ مدل</span></div>
+      </a>
+      <a class="cat reveal" href="#">
+        <img src="assets/cat-lingerie.jpg" alt="لباس زیر">
+        <div class="veil"></div><div class="go">↗</div>
+        <div class="info"><h3>لباس زیر</h3><span>۳۲۰ مدل</span></div>
+      </a>
+      <a class="cat reveal" href="#">
+        <img src="assets/cat-sets.jpg" alt="ست‌های آماده">
+        <div class="veil"></div><div class="go">↗</div>
+        <div class="info"><h3>ست‌های آماده</h3><span>۱۲۰ ست منتخب</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AI Stylist -->
+<section id="ai" class="ai">
+  <div class="ai-grid">
+    <div class="ai-copy reveal">
+      <div class="sec-tag">مشاور هوشمند ژیوار</div>
+      <h2>یه استایلیست شخصی که همیشه کنارته</h2>
+      <p>بهش بگو کجا می‌ری و بودجه‌ات چقدره؛ باقی کار رو بسپار به ما. از انتخاب ست تا پیشنهاد سایز — همه هوشمند.</p>
+      <ul class="ai-feats">
+        <li><span class="tick">✓</span><div>پیشنهاد ست کامل بر اساس <b>مناسبت، رنگ و بودجه</b></div></li>
+        <li><span class="tick">✓</span><div>پیشنهاد <b>سایز دقیق</b> با اندازه‌های بدنی تو</div></li>
+        <li><span class="tick">✓</span><div>تحلیل <b>ترندهای هفته</b> از شبکه‌های اجتماعی</div></li>
+        <li><span class="tick">✓</span><div>دسترسی ۲۴ ساعته، هم در سایت هم در <b>ربات تلگرام</b></div></li>
+      </ul>
+      <a href="#" class="btn btn-primary" style="background:var(--gold);color:var(--plum);box-shadow:0 10px 30px rgba(201,169,106,.35)">شروع مشاوره رایگان ←</a>
+    </div>
+    <div class="reveal">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="chat-head">
+            <div class="avatar">ژ</div>
+            <div><b>ژیوار AI</b><span class="online">مشاور استایل • آنلاین</span></div>
+          </div>
+          <div class="chat-body" id="chatBody"></div>
+          <div class="chat-input">
+            <span>پیام خود را بنویسید...</span>
+            <span class="send">↑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">تازه‌ها</div>
+      <h2>جدیدترین محصولات ژیوار</h2>
+      <p>هر هفته انتخاب‌های تازه، همراه با پیشنهاد ست هوشمند.</p>
+    </div>
+    <div class="tabs reveal">
+      <button class="tab active">همه</button>
+      <button class="tab">پوشاک</button>
+      <button class="tab">اکسسوری</button>
+      <button class="tab">لباس زیر</button>
+      <button class="tab">پرفروش‌ها</button>
+    </div>
+    <div class="products" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- Telegram -->
+<section id="tg">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">زیوار روی تلگرام</div>
+      <h2>یه قدم جلوتر از همه باش</h2>
+      <p>کانال ما برای جدیدترین‌ها و فلش‌سل‌ها؛ ربات ما برای سفارش، پیگیری و مشاوره — همه داخل تلگرام.</p>
+    </div>
+    <div class="tg-grid">
+      <div class="tg-card tg-channel reveal">
+        <div class="tg-icon">📣</div>
+        <h3>کانال ژیوار استایل</h3>
+        <div class="tg-count">👥 ۱۸٬۴۰۰ عضو • 🔥 ۳ پست روزانه</div>
+        <p>اولین نفری باش که جدیدترین کالکشن‌ها، فلش‌سل‌های ۲۴ ساعته و پست‌های استایل روزانه رو می‌بینی.</p>
+        <ul class="tg-list">
+          <li>اطلاع‌رسانی لحظه‌ای محصولات جدید</li>
+          <li>تخفیف‌های اختصاصی اعضای کانال</li>
+          <li>نظرسنجی هفتگی رنگ و مدل</li>
+        </ul>
+        <a href="#" class="tg-btn">عضو کانال شو @ZhevarStyle ↗</a>
+      </div>
+      <div class="tg-card tg-bot reveal">
+        <div class="tg-icon">🤖</div>
+        <h3>ربات ژیوار</h3>
+        <div class="tg-count" style="color:var(--muted)">🤖 @ZhevarBot • پاسخ فوری</div>
+        <p>سفارش بده، پیگیری کن، سایز بپرس و با مشاور هوشمند چت کن — بدون even needing to باز کردن سایت.</p>
+        <ul class="tg-list">
+          <li>جستجو و خرید مستقیم داخل چت</li>
+          <li>پیگیری وضعیت سفارش با /orders</li>
+          <li>مشاوره سایز و ست با هوش مصنوعی</li>
+          <li>پیام موجود شدن محصول ناموجود</li>
+        </ul>
+        <a href="#" class="tg-btn">شروع ربات @ZhevarBot ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Install PWA -->
+<section id="install">
+  <div class="wrap">
+    <div class="install reveal">
+      <div class="sec-tag">اپلیکیشن ژیوار</div>
+      <h2>ژیوار رو روی گوشیت نصب کن</h2>
+      <p>مثل یه اپلیکیشن واقعی، بدون حتی needing to رفتن به استور. سریع، سبک و همیشه در دسترس.</p>
+      <div class="steps">
+        <div class="step"><div class="n">۱</div><b>سایت رو باز کن</b><span>با مرورگر موبایل وارد zhevar.shop شو</span></div>
+        <div class="step"><div class="n">۲</div><b>«افزودن به صفحه اصلی»</b><span>از منوی مرورگر گزینه Add to Home Screen رو بزن</span></div>
+        <div class="step"><div class="n">۳</div><b>تمام!</b><span>آیکون ژیوار روی صفحه گوشیت، آماده استفاده</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="#" class="logo"><span class="mark">ژ</span><span>ژیوار<small>ZHEVAR</small></span></a>
+      <p>ژیوار، استایلیست شخصی آنلاین توست. پوشاک، اکسسوری و لباس زیر با کیفیت منتخب، همراه با مشاوره هوشمند و پشتیبانی واقعی.</p>
+    </div>
+    <div>
+      <h5>خرید</h5>
+      <ul class="foot-links">
+        <li><a href="#">پوشاک</a></li>
+        <li><a href="#">اکسسوری</a></li>
+        <li><a href="#">لباس زیر</a></li>
+        <li><a href="#">ست‌های آماده</a></li>
+        <li><a href="#">تخفیف‌ها</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>ژیوار</h5>
+      <ul class="foot-links">
+        <li><a href="#ai">مشاور هوشمند</a></li>
+        <li><a href="#tg">کانال تلگرام</a></li>
+        <li><a href="#tg">ربات تلگرام</a></li>
+        <li><a href="#">وبلاگ استایل</a></li>
+        <li><a href="#">درباره ما</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>پشتیبانی</h5>
+      <ul class="foot-links">
+        <li><a href="#">پیگیری سفارش</a></li>
+        <li><a href="#">راهنمای سایز</a></li>
+        <li><a href="#">مرجوعی و تعویض</a></li>
+        <li><a href="#">سوالات متداول</a></li>
+        <li><a href="#">تماس با ما</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© ۲۰۲۶ ژیوار — تمام حقوق محفوظ است. ساخته‌شده با ❤️ در ایران</div>
+    <div class="pay">
+      <span>درگاه زرین‌پال</span><span>درگاه آیدی‌پی</span><span>پرداخت امن</span><span>ارسال سریع</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✅ به سبد خرید اضافه شد</div>
+
+<script>
+  /* ===== Data ===== */
+  const products = [
+    {name:'پیراهن بلند ساتن رزگلد', cat:'پوشاک', price:'۱٬۸۹۰٬۰۰۰', old:'۲٬۴۰۰٬۰۰۰', off:'۲۱٪', tag:'جدید', g:'linear-gradient(160deg,#E8CFC4,#C9A0A0)'},
+    {name:'ست گوشواره و گردنبند طلا کوبی', cat:'اکسسوری', price:'۱٬۲۴۰٬۰۰۰', old:'', off:'', tag:'پرفروش', g:'linear-gradient(160deg,#EBD9B7,#C9A96A)'},
+    {name:'مانتو کرسیژ کرپ مشکی', cat:'پوشاک', price:'۲٬۶۵۰٬۰۰۰', old:'۳٬۱۰۰٬۰۰۰', off:'۱۵٪', tag:'', g:'linear-gradient(160deg,#5A4350,#2B2024)'},
+    {name:'ست لباس زیر دانتل کرم', cat:'لباس زیر', price:'۹۸۰٬۰۰۰', old:'', off:'', tag:'جدید', g:'linear-gradient(160deg,#F3E3DC,#D9BDB2)'},
+    {name:'شال ابریشمی طرح مینیمال', cat:'اکسسوری', price:'۶۴۰٬۰۰۰', old:'۸۲۰٬۰۰۰', off:'۲۲٪', tag:'', g:'linear-gradient(160deg,#DCE4E8,#A8BCC4)'},
+    {name:'کیف دوشی چرم طبیعی کاراملی', cat:'اکسسوری', price:'۲٬۹۵۰٬۰۰۰', old:'', off:'', tag:'پرفروش', g:'linear-gradient(160deg,#D8C3B0,#A98A6E)'},
+    {name:'بلوز بافت دست‌باف پاییزه', cat:'پوشاک', price:'۱٬۵۶۰٬۰۰۰', old:'', off:'', tag:'جدید', g:'linear-gradient(160deg,#E5D9C5,#B7A488)'},
+    {name:'ست پیراهن و شلوار کتان', cat:'پوشاک', price:'۲٬۳۹۰٬۰۰۰', old:'۲٬۹۰۰٬۰۰۰', off:'۱۸٪', tag:'', g:'linear-gradient(160deg,#D9E0D6,#93A78F)'}
+  ];
+
+  /* ===== Render products ===== */
+  const grid = document.getElementById('productGrid');
+  products.forEach((p,i)=>{
+    const el = document.createElement('div');
+    el.className = 'card reveal';
+    el.style.transitionDelay = (i%4)*80 + 'ms';
+    el.innerHTML = `
+      <div class="thumb">
+        <div class="ph" style="background:${p.g}">${p.cat}</div>
+        ${p.tag?`<span class="tag ${p.tag==='پرفروش'?'hot':''}">${p.tag}</span>`:''}
+        <button class="fav">🤍</button>
+      </div>
+      <div class="body">
+        <span class="cat-name">${p.cat}</span>
+        <h4>${p.name}</h4>
+        <div class="price">
+          <b>${p.price}</b>
+          ${p.old?`<del>${p.old}</del><span class="off">${p.off}</span>`:''}
+        </div>
+        <button class="add">🛍️ افزودن به سبد</button>
+      </div>`;
+    grid.appendChild(el);
+  });
+
+  /* ===== Fav + Cart ===== */
+  let cart = 2;
+  document.querySelectorAll('.fav').forEach(f=>f.addEventListener('click',e=>{
+    e.stopPropagation();
+    f.classList.toggle('liked');
+    f.textContent = f.classList.contains('liked') ? '❤️' : '🤍';
+  }));
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',e=>{
+    e.stopPropagation();
+    cart++;
+    document.getElementById('cartCount').textContent = cart;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>toast.classList.remove('show'),1800);
+  }));
+
+  /* ===== AI chat animation ===== */
+  const chatBody = document.getElementById('chatBody');
+  const script = [
+    {who:'user', text:'سلام! برای یه قرار مهم شب، ست شیک و راحت می‌خوام. بودجه‌ام تا ۳ میلیونه 👗'},
+    {who:'bot', text:'سلام عشقم! حتماً. سه گزینه برات دارم که هم شیکن، هم راحت:'},
+    {who:'bot', prod:true, title:'پیراهن بلند ساتن رزگلد', price:'۱٬۸۹۰٬۰۰۰', g:'linear-gradient(160deg,#E8CFC4,#C9A0A0)', note:'پیشنهاد ویژه من ⭐'},
+    {who:'bot', text:'با گوشواره طلایی کوچک ستش کنی، خیلی شیک می‌شه. سایز پیشنهادی: M ✅'},
+    {who:'user', text:'عالیه! همین رو برام نگه دار 🙌'}
+  ];
+  function runChat(){
+    chatBody.innerHTML = '';
+    let i = 0;
+    function next(){
+      if(i >= script.length){
+        setTimeout(runChat, 4200);
+        return;
+      }
+      const s = script[i++];
+      if(s.who === 'bot'){
+        const t = document.createElement('div');
+        t.className = 'typing';
+        t.innerHTML = '<i></i><i></i><i></i>';
+        chatBody.appendChild(t);
+        setTimeout(()=>{
+          t.remove();
+          const m = document.createElement('div');
+          m.className = 'msg bot';
+          m.innerHTML = s.prod
+            ? `<div class="prod"><div class="thumb" style="background:${s.g}"></div><div><b>${s.title}</b><span>${s.price}</span><br><small>${s.note}</small></div></div>`
+            : s.text;
+          chatBody.appendChild(m);
+          requestAnimationFrame(()=>m.classList.add('show'));
+          setTimeout(next, 1300);
+        }, 900);
+      }else{
+        const m = document.createElement('div');
+        m.className = 'msg user';
+        m.textContent = s.text;
+        chatBody.appendChild(m);
+        requestAnimationFrame(()=>m.classList.add('show'));
+        setTimeout(next, 700);
+      }
+    }
+    next();
+  }
+  runChat();
+
+  /* ===== Reveal on scroll ===== */
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ===== Header shadow ===== */
+  addEventListener('scroll',()=>{
+    document.getElementById('header').classList.toggle('scrolled', scrollY>10);
+  });
+</script>
+</body>
+</html>

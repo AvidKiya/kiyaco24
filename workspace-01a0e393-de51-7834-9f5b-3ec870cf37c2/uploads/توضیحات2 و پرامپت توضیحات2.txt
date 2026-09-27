@@ -1,0 +1,1354 @@
+اینارو هم به پرامپت اضافه کن اینا پیام هاییه که به مدل دادم قبلا و هر بار بهتر کرده نتیجه رو
+
+
+https://github.com/AvidKiya/Website-Template.git
+کلون کن
+خب ترکیب کن و یه چیز خفن بساز ترکیبی و مدرن
+همه تم هارو ترکیب کن یه تم جدید ترکیبی با دیزاین جدید و تفاوت با استفاده از چیزای جدید که گفتم بساز
+آدرس سایتش اینه: برای دیزاین بهتر
+css-shape.com/inverted-radius/
+این یکی هم هست البته:
+corner-inverter.douiri.org
+حاشیه معکوس هم میخوام بسازی براش و یه چیز خفن بهم بدی
+و هر بار چک کنی و بگی:
+مشکلاتش چیه؟
+چه جاهاییش مشکل داره؟
+چه ایده و فکری برای بهتر شدنش داری؟
+و میخوام هربار
+رفع کنی و اضافه کنی
+تم تاریک و روشن داشته باشه
+مرتب تر و حرفه ای تر باشه
+وب اپلیکیشن باشه که بشه مثل برنامه نصبش کرد
+پنل مدیریت داشته باشه
+همه چیز های لازم یه سایت فروشگاهی داشته باشه
+لوگو مو داخل ریپازیتوری گیت هاب گزاشتم
+همه چیزشو درست کن و بهترین چیزارو براش اضافه کن و درست کن
+این برای آنلاین شاپ من هست من تو کار کمربند و اکسسوری هستم
+بدلیجات اکسسوری و کمربند میفروشم مغازه دارم
+پیج اینستا دارم
+کانال تلگرام دارم
+ربات تلگرامی هم دارم
+میخوام برام بسازی سایتمو
+لوگوم داخل فایل ها هستش
+ChatGPT Image Sep 13, 2026, 02_49_31 PM.png
+logo-latin-v1-1x1.png
+بک گراندشو خودت حذف کن
+هرکدوم قشنگتره همونو بزار
+بک گراندشو حذف کن بزار
+پنل مدیریت کامل میخوام همه چیز باید داشته باشه همه چیز یعنی با سایتم نیاز به هیچ کار دستی نباشه دیگه
+خب میخوام مرحله به مرحله ادامه بدی و تا موقعه ای که کامل میشه برام بسازیش ولی مرحله به مرحله
+
+inverted-radius
+زیاده روی شده و خیلی زشت شده
+سایت https://dark.parskalas.com ببین من مثل این سایت میخوام بسازی
+
+خب همینو میتونی برام از این ها هم کار کنی توش ؟
+https://corner-inverter.douiri.org/?w=200&h=100&b=0&r=6.06,0,0,0&ic=20x30x10:0,60x30x10:1,30x20x10:0,20x20x10:1&bc=FF2056&bg=513D34&utm_source=copy&utm_medium=share&utm_campaign=code_export
+
+فقط زیاده روی نشه
+
+سایزو مدلشم میتونی تغییر بدی
+
+نه جالب نشد میخوام از اون فضای خالی که ایجاد میشه corner-inverter میشه استفاده بشه دکمه ای یا بنری باکشی چیزی بیاد و استفاده بشه کرد از اون فضای تو رفته  
+
+===================================
+
+آره. پیام‌های قبلیت در واقع چند دستور مهم‌تر به پرامپت قبلی اضافه می‌کنند: کلون ریپازیتوری، الهام از سایت مرجع، طراحی inverted corner به‌صورت کاربردی نه تزئینی، استفاده از فضای تو‌رفته برای CTA/بنر، توسعه مرحله‌ای، بازبینی بعد از هر مرحله، و اتوماسیون کامل پنل مدیریت.
+این نسخه را می‌توانی به مدل کدنویس بدهی و از همان اول تأکید کنی که مرحله‌به‌مرحله پروژه را بسازد و هر مرحله را بررسی و اصلاح کند.
+ULTIMATE MASTER PROMPT
+Build a Premium Fashion Accessories E-Commerce Platform
+You are acting as a senior:
+Product Designer
+UX/UI Designer
+Design System Architect
+Full-Stack Developer
+E-Commerce Architect
+B2B Commerce Specialist
+Fashion Editorial Designer
+PWA Engineer
+SEO Specialist
+CRM Specialist
+Conversion Rate Optimization Specialist
+QA Engineer
+Security Engineer
+Technical Project Manager
+Your job is to take the existing project, understand it deeply, improve it continuously, and transform it into a complete production-ready online shopping platform for a fashion accessories business.
+Do not treat this as a simple website redesign.
+Build a complete, scalable, modern Fashion Commerce Platform.
+==================================================
+0. EXISTING REPOSITORY — START FROM HERE
+Repository:
+https://github.com/AvidKiya/Website-Template.git
+FIRST:
+Clone the repository.
+Analyze the entire existing codebase before changing anything.
+Inspect:
+Existing pages
+Existing components
+Existing CSS
+Existing JavaScript / TypeScript
+Existing assets
+Existing images
+Existing logo files
+Existing responsive behavior
+Existing design system
+Existing animations
+Existing layouts
+Existing dependencies
+Existing architecture
+Existing bugs
+Existing reusable components
+DO NOT immediately delete the existing project.
+First understand what is already good and what should be preserved.
+Then improve, refactor and rebuild where necessary.
+==================================================
+BUSINESS CONTEXT
+==================================================
+This website is for a real fashion accessories business.
+The business sells:
+Women's belts
+Fashion belts
+Costume jewelry
+Fashion jewelry
+Accessories
+Jewelry sets
+Other related fashion accessories
+The business has:
+Physical store
+Instagram page
+Telegram channel
+Telegram bot
+Online shop
+The website must become the central digital platform connecting these channels.
+The website must support BOTH:
+B2C retail customers
+AND
+B2B wholesale / business partners.
+==================================================
+2. MAIN BUSINESS OBJECTIVES
+PRIMARY:
+Retail online shopping.
+SECONDARY:
+Wholesale shopping for business partners.
+THIRD:
+Fashion content, trends and daily digital newspaper.
+The platform must increase:
+Conversion rate
+Average order value
+Repeat purchases
+Customer retention
+Wholesale orders
+Organic traffic
+Brand recognition
+==================================================
+3. DESIGN REFERENCES
+Use these references as DESIGN INSPIRATION, NOT as a pixel-for-pixel copy.
+Main visual reference:
+https://dark.parskalas.com
+Study its:
+UI hierarchy
+Layout
+Spacing
+Cards
+Navigation
+Dark aesthetic
+Section transitions
+Visual rhythm
+Product presentation
+Modern interface patterns
+The final website must NOT simply copy it.
+Create a NEW design language inspired by the useful aspects of the reference.
+Combine the existing GitHub template with the visual direction of the reference and the requirements in this prompt.
+The result must look like a new, original and significantly improved design.
+==================================================
+4. INVERTED CORNERS / INVERTED RADIUS
+Study and use these references:
+https://css-shape.com/inverted-radius/
+https://corner-inverter.douiri.org/
+Use inverted corners / concave corners as a distinctive design language.
+BUT:
+DO NOT OVERUSE THEM.
+Previous iterations became visually overloaded because inverted corners were used everywhere.
+Avoid that.
+Use inverted corners strategically for:
+Hero sections
+Selected promotional banners
+Featured cards
+Editorial sections
+Collection sections
+Special CTA areas
+Product campaign blocks
+Not every card should have an inverted corner.
+==================================================
+5. IMPORTANT — USE THE EMPTY SPACE
+This is one of the most important design requirements.
+When an inverted corner creates an empty / recessed area, DO NOT leave it useless.
+Use the recessed space intentionally.
+Examples:
+CTA button
+Floating button
+Mini promotional banner
+Product badge
+Discount badge
+Arrow
+"View Collection" action
+"Shop Now" action
+Editorial label
+Category shortcut
+Decorative-but-functional control
+Example concept:
+A large editorial card has a concave corner.
+Instead of leaving the corner empty:
+Place a floating CTA inside or partially overlapping the recessed area.
+The empty space created by the inverted corner should become a FUNCTIONAL DESIGN AREA.
+However:
+Keep it subtle.
+The purpose is to create a distinctive visual identity, not visual chaos.
+==================================================
+6. INVERTED CORNER SYSTEM
+Create reusable CSS / component utilities for inverted corners.
+The system must support:
+Size
+Radius
+Direction
+Depth
+Position
+Background
+Responsive behavior
+Allow different configurations for:
+Desktop
+Tablet
+Mobile
+The shape must adapt to different component sizes.
+Do not hard-code one shape everywhere.
+Create reusable variants such as:
+inverted-top-left
+inverted-top-right
+inverted-bottom-left
+inverted-bottom-right
+and combinations when appropriate.
+==================================================
+7. DESIGN PHILOSOPHY
+Create a completely new visual system combining:
+Existing GitHub template
++
+Modern dark fashion-commerce aesthetic
++
+Editorial fashion magazine
++
+Inverted corner geometry
++
+Modern web-app UX
++
+Premium product presentation
++
+Functional negative space
+The result should feel:
+Premium
+Modern
+Experimental
+Elegant
+Clean
+Commercial
+Fashion-oriented
+Technological
+Professional
+It must NOT feel:
+Generic
+Template-based
+Over-designed
+Cartoonish
+Cheap
+Random
+Excessively rounded
+Excessively decorated
+==================================================
+8. LIGHT + DARK THEME
+Support:
+LIGHT
+DARK
+SYSTEM
+Light palette:
+Primary: #004741
+Background: #F0EDE4
+Text: #171717
+White: #FFFFFF
+Dark palette:
+Primary: #21F1A8
+Background: #171717
+Text: #F0EDE4
+Create proper semantic design tokens.
+Do not hard-code colors throughout the application.
+Theme preference must persist.
+==================================================
+9. LOGO / BRAND ASSETS
+The logo files are already available in the repository / uploaded assets.
+Potential files include:
+ChatGPT Image Sep 13, 2026, 02_49_31 PM.png
+logo-latin-v1-1x1.png
+Find all logo assets in the repository.
+Inspect them.
+Choose the best version for the website.
+If the selected logo contains an unwanted background:
+REMOVE THE BACKGROUND.
+Create / use a transparent version.
+Do not distort the logo.
+Do not recreate the logo unnecessarily.
+Use appropriate logo variants for:
+Header
+Footer
+Dark theme
+Light theme
+Favicon
+PWA icon
+Social sharing
+==================================================
+10. RESPONSIVE DESIGN
+The website must be fully responsive.
+Support:
+Mobile
+Tablet
+Laptop
+Desktop
+Large screens
+Design mobile-first.
+Do not simply shrink the desktop layout.
+Mobile should have its own optimized UX.
+==================================================
+11. PWA
+This must be a real Progressive Web App.
+Users should be able to install it like an application.
+Implement architecture for:
+Web App Manifest
+App icons
+Install prompt
+Service worker
+Offline shell
+Caching strategy
+Push notification architecture
+App-like navigation
+The website must feel like a real application on mobile.
+==================================================
+12. MAIN NAVIGATION
+Main navigation:
+خانه
+فروشگاه
+کمربند
+اکسسوری
+بدلیجات
+جدیدها
+پرفروش‌ها
+تخفیف‌ها
+مجله مد
+همکاری / خرید عمده
+Header:
+Logo
+Search
+Wishlist
+Account
+Cart
+Clearly expose:
+خرید عمده / همکاری
+Do not hide B2B in the footer.
+==================================================
+13. MOBILE NAVIGATION
+Mobile bottom navigation:
+خانه
+فروشگاه
+جستجو
+علاقه‌مندی
+حساب
+Use sticky purchase actions when appropriate.
+==================================================
+14. HOMEPAGE
+Create a high-converting homepage.
+Recommended structure:
+HEADER
+HERO
+MAIN CATEGORIES
+NEW ARRIVALS
+BEST SELLERS
+TRENDING TODAY
+FEATURED COLLECTION
+SHOP THE LOOK
+FASHION DAILY
+SPECIAL OFFER
+PRODUCT RECOMMENDATIONS
+CUSTOMER BENEFITS
+NEWSLETTER
+SOCIAL PROOF
+FOOTER
+Do not make every section look identical.
+Use visual rhythm.
+Alternate between:
+Product grids
+Editorial layouts
+Large imagery
+Horizontal scrolling
+Asymmetric sections
+Magazine-style compositions
+Functional inverted corners
+==================================================
+15. HERO SECTION
+Hero must be dynamic.
+Admin should control:
+Image
+Video
+Title
+Subtitle
+CTA
+Link
+Campaign
+Start date
+End date
+Support:
+Static hero
+Video hero
+Promotional hero
+New collection hero
+==================================================
+16. PRODUCT CATEGORIES
+Create dynamic categories.
+Main:
+کمربند
+اکسسوری
+بدلیجات
+Example subcategories:
+کمربند:
+زنانه
+پهن
+باریک
+مجلسی
+چرمی
+زنجیری
+پارچه‌ای
+فانتزی
+اکسسوری:
+گردنبند
+دستبند
+انگشتر
+گوشواره
+پابند
+گیره مو
+اکسسوری کیف
+بدلیجات:
+مینیمال
+مجلسی
+روزمره
+استیل
+ست‌ها
+Admins must be able to create categories dynamically.
+==================================================
+17. SHOP PAGE
+Create:
+Search
+Filters
+Sorting
+Pagination / infinite scroll
+Wishlist
+Quick view
+Quick add
+Compare
+Filters:
+Category
+Price
+Color
+Material
+Size
+Style
+Occasion
+Availability
+Discount
+Collection
+==================================================
+18. PRODUCT CARD
+Product cards:
+Image
+Hover image
+Wishlist
+Badge
+Product name
+Price
+Discount
+Rating
+Colors
+Quick add
+Badges:
+NEW
+BEST SELLER
+TRENDING
+SALE
+LIMITED
+Keep product cards visually clean.
+==================================================
+19. PRODUCT PAGE
+Include:
+Gallery
+Video
+Name
+Price
+Discount
+Stock
+SKU
+Color
+Size
+Material
+Description
+Specifications
+Size guide
+Shipping
+Returns
+Reviews
+Questions
+Related products
+Complementary products
+Recently viewed
+Actions:
+Add to cart
+Buy now
+Wishlist
+Share
+Notify me
+==================================================
+20. BELT SIZE CALCULATOR
+Create a professional belt sizing system.
+User enters waist size.
+System recommends appropriate belt size.
+Include:
+Measurement guide
+Visual instructions
+Belt length
+Waist size
+Recommended size
+Size conversion
+Make the sizing rules configurable through admin.
+==================================================
+21. CART
+Cart must support:
+Quantity
+Variant
+Price
+Discount
+Coupon
+Gift wrapping
+Gift message
+Shipping
+Total
+Add:
+FREE SHIPPING PROGRESS
+Example:
+"برای ارسال رایگان ۳۵۰ هزار تومان دیگر خرید کنید."
+Also show:
+Complementary products.
+==================================================
+22. GUEST CHECKOUT
+Do not force registration.
+Support:
+Guest Checkout
+Flow:
+Product
+→ Cart
+→ Checkout
+→ Address
+→ Shipping
+→ Payment
+→ Confirmation
+==================================================
+23. B2B / WHOLESALE
+Create a complete B2B experience.
+Pages:
+Wholesale landing
+Wholesale application
+Wholesale login
+Wholesale dashboard
+Wholesale catalog
+Wholesale cart
+Wholesale orders
+Reorder
+Invoices
+Partner discounts
+==================================================
+24. WHOLESALE APPLICATION
+Fields:
+Name
+Store
+Phone
+City
+Address
+Business type
+Instagram
+Website
+Monthly purchase estimate
+Notes
+Admin approval required.
+==================================================
+25. WHOLESALE PRICE LEVELS
+Support:
+RETAIL
+WHOLESALE
+VIP WHOLESALE
+DISTRIBUTOR
+SPECIAL PARTNER
+Each tier supports:
+Fixed prices
+Percentage discounts
+Minimum quantity
+Special products
+==================================================
+26. BULK ORDERING
+Create a fast wholesale ordering table.
+Example:
+Product | Color | Size | Quantity
+Belt 001 | Black | 85 | 5
+Belt 001 | Brown | 90 | 4
+Button:
+افزودن همه به سبد عمده
+==================================================
+27. WHOLESALE REORDER
+Allow wholesale customers to repeat previous orders.
+Button:
+سفارش مجدد
+Check current inventory before adding.
+==================================================
+28. FASHION DAILY
+Create a premium digital fashion newspaper.
+Name:
+FASHION DAILY
+or
+DAILY EDIT
+Each day gets an Edition.
+Example:
+FASHION DAILY
+18 SEP 2026
+TODAY'S EDITION
+Sections:
+Main Story
+Trending Now
+Fashion News
+Accessory Trend
+Color of the Day
+Style Inspiration
+Product Spotlight
+Editor's Pick
+==================================================
+29. FASHION DAILY CONTENT
+Support:
+Fashion news
+Trends
+Belt trends
+Jewelry trends
+Accessory trends
+Color trends
+Seasonal trends
+Street style
+Celebrity fashion
+Fashion Week
+Runway
+New collections
+Styling
+Beauty trends
+Popular products
+==================================================
+30. CONTENT → COMMERCE
+This is critical.
+Every article can connect to products.
+Example:
+ARTICLE:
+"5 ترند کمربند برای پاییز"
+Then:
+SHOP THE TREND
+Show relevant products.
+Allow product cards inside articles.
+Content must naturally lead to commerce.
+==================================================
+31. TRENDING TODAY
+Create:
+TRENDING TODAY
+Categories:
+Trending belts
+Trending colors
+Trending jewelry
+Trending materials
+Trending styles
+Trending collections
+Every trend can connect to products.
+==================================================
+32. STYLE GUIDE
+Create:
+How to style a belt
+How to choose belt size
+How to match belt with shoes
+Gold vs silver
+How to layer jewelry
+How to choose accessories
+Accessories for occasions
+How to style accessories
+SEO optimized.
+==================================================
+33. SHOP THE LOOK
+Create complete looks.
+Example:
+THE BLACK LOOK
+Belt
+Necklace
+Bracelet
+Bag
+Support:
+Add entire look to cart.
+==================================================
+34. COLLECTIONS
+Dynamic collections:
+Autumn Collection
+Minimal Collection
+Party Collection
+Office Style
+Street Style
+Gold Collection
+Black Collection
+Each collection gets a dedicated landing page.
+==================================================
+35. SEARCH
+Global search must support:
+Products
+Categories
+Articles
+Trends
+Guides
+Autocomplete.
+Example:
+"کمربند مشکی"
+Results:
+Products
+Articles
+Trends
+Guides
+==================================================
+36. WISHLIST
+Support:
+Wishlist
+Price drop notification
+Back in stock
+Recently viewed
+Share wishlist
+==================================================
+37. COMPARE
+Compare:
+Price
+Material
+Color
+Size
+Width
+Buckle
+Style
+Rating
+==================================================
+38. REVIEWS
+Support:
+Rating
+Text
+Images
+Verified purchase
+Admin moderation
+==================================================
+39. CUSTOMER ACCOUNT
+Dashboard:
+Orders
+Wishlist
+Addresses
+Wallet
+Coupons
+Loyalty points
+Notifications
+Recently viewed
+Reviews
+Support
+Profile
+==================================================
+40. LOYALTY
+Levels:
+BRONZE
+SILVER
+GOLD
+VIP
+Earn points through:
+Purchases
+Reviews
+Referrals
+Engagement
+Rewards:
+Coupons
+Discounts
+Birthday rewards
+Exclusive offers
+Early access
+Admin-configurable.
+==================================================
+41. REFERRAL
+Create referral links.
+Track:
+Clicks
+Signups
+Purchases
+Rewards
+==================================================
+42. GIFT SYSTEM
+Support:
+Gift wrapping
+Gift message
+Gift cards
+==================================================
+43. FLASH SALE
+Real server-controlled Flash Sale.
+Support:
+Start date
+End date
+Products
+Sale price
+Stock limit
+Countdown
+==================================================
+44. NEW DROP
+Create:
+NEW DROP
+Each Drop includes:
+Products
+Editorial intro
+Campaign imagery
+Collection page
+==================================================
+45. PRE-ORDER
+Support:
+COMING SOON
+NOTIFY ME
+PRE-ORDER
+==================================================
+46. PRODUCT RECOMMENDATIONS
+Use:
+Similar products
+Complementary products
+Upsell
+Cross-sell
+Frequently bought together
+Personalized recommendations
+Examples:
+"مخصوص شما"
+"این محصولات را هم ببینید"
+"محصولات مکمل"
+==================================================
+47. AI READY
+Prepare architecture for:
+AI Style Assistant
+Natural Language Search
+AI Product Recommendations
+AI Style Matching
+Example:
+"یه کمربند برای استایل مشکی مجلسی میخوام"
+Do not fake AI functionality.
+Create integration-ready architecture.
+==================================================
+48. MARKETING AUTOMATION
+Prepare:
+Abandoned cart
+Welcome campaign
+First purchase
+Win-back
+Birthday
+Price drop
+Back in stock
+New collection
+Promotional campaigns
+==================================================
+49. ADMIN PANEL
+Create a FULL professional admin dashboard.
+The admin panel must be powerful enough that the business owner does NOT need to manually edit website code for normal business operations.
+The goal:
+"Everything that can reasonably be managed through admin should be managed through admin."
+Admin must control:
+Products
+Categories
+Collections
+Inventory
+Orders
+Customers
+Wholesale
+Articles
+Fashion Daily
+Trends
+Banners
+Hero
+Campaigns
+Coupons
+Discounts
+Reviews
+Notifications
+Pages
+SEO
+Menus
+Homepage sections
+Settings
+Users
+Roles
+Reports
+Analytics
+==================================================
+50. PRODUCT MANAGEMENT
+Admin:
+Create
+Edit
+Delete
+Duplicate
+Manage:
+Images
+Videos
+Variants
+Colors
+Sizes
+SKU
+Barcode
+Price
+Discount
+Stock
+SEO
+Related products
+Complementary products
+Cross-sell
+Upsell
+==================================================
+51. INVENTORY
+Variant-based inventory.
+Example:
+Black / 85
+Black / 90
+Brown / 85
+Support:
+Low stock
+Out of stock
+Fast selling
+Restock alert
+==================================================
+52. CONTENT MANAGEMENT SYSTEM
+Admin must manage:
+Articles
+Fashion Daily editions
+Trends
+Authors
+Tags
+Categories
+Featured content
+Related products
+Support scheduled publishing.
+==================================================
+53. HOMEPAGE BUILDER
+This is important.
+Admin should be able to manage homepage sections without coding.
+Support:
+Add section
+Remove section
+Reorder section
+Enable / disable
+Change title
+Change images
+Change products
+Change CTA
+Change background
+Change layout variant
+==================================================
+54. BANNER MANAGEMENT
+Admin controls:
+Desktop image
+Mobile image
+Text
+CTA
+Link
+Start time
+End time
+Priority
+Campaign
+==================================================
+55. MENU MANAGEMENT
+Admin can manage:
+Header menu
+Footer menu
+Categories
+Mega menu
+Mobile menu
+==================================================
+56. ORDER MANAGEMENT
+Statuses:
+Pending
+Paid
+Processing
+Packed
+Shipped
+Delivered
+Cancelled
+Returned
+Refunded
+Allow internal notes and audit trail.
+==================================================
+57. CUSTOMER MANAGEMENT
+Admin can:
+Search customers
+View profile
+View orders
+View behavior
+View loyalty
+View coupons
+View wholesale status
+Add notes
+Manage account status
+==================================================
+58. WHOLESALE MANAGEMENT
+Admin can:
+Review applications
+Approve
+Reject
+Suspend
+Assign pricing tier
+Assign discount
+Set minimum order
+Manage partner prices
+View wholesale orders
+View partner history
+==================================================
+59. COUPONS
+Support:
+Percentage
+Fixed
+First order
+Product
+Category
+Wholesale
+Minimum order
+Maximum discount
+Expiration
+Usage limit
+User limit
+==================================================
+60. ANALYTICS
+Dashboard:
+Revenue
+Orders
+Customers
+AOV
+Conversion
+Cart abandonment
+Best products
+Best categories
+Wholesale revenue
+Retail revenue
+Repeat purchase rate
+==================================================
+61. SEO
+All content types support:
+SEO title
+Meta description
+Slug
+Canonical
+OG image
+Structured data
+Schema:
+Product
+Article
+Breadcrumb
+Organization
+FAQ
+Review
+==================================================
+62. SECURITY
+Implement:
+Authentication
+Authorization
+RBAC
+Secure sessions
+Password hashing
+Input validation
+Rate limiting
+XSS protection
+CSRF protection
+Audit logs
+==================================================
+63. ADMIN ROLES
+Support:
+SUPER ADMIN
+MANAGER
+CONTENT MANAGER
+PRODUCT MANAGER
+ORDER MANAGER
+SUPPORT
+WAREHOUSE
+MARKETING
+Use permission-based access.
+==================================================
+64. DATABASE
+Design a scalable database.
+Entities:
+Users
+Roles
+Permissions
+Products
+ProductVariants
+Categories
+Collections
+Tags
+Inventory
+Orders
+OrderItems
+Payments
+Shipping
+Addresses
+Reviews
+Wishlists
+Coupons
+LoyaltyPoints
+WholesaleAccounts
+WholesalePrices
+WholesaleOrders
+Articles
+Trends
+FashionDailyEditions
+Notifications
+Tickets
+Campaigns
+Analytics
+Referrals
+GiftCards
+HomepageSections
+Banners
+Menus
+Settings
+AuditLogs
+==================================================
+65. PERFORMANCE
+Optimize:
+Core Web Vitals
+Image optimization
+Lazy loading
+Code splitting
+Caching
+WebP
+AVIF
+Minimal JS
+Efficient API requests
+==================================================
+66. ACCESSIBILITY
+Support:
+Semantic HTML
+Keyboard navigation
+ARIA
+Focus states
+Contrast
+Screen readers
+==================================================
+67. ERROR / EMPTY / LOADING STATES
+Create professional states for:
+Empty cart
+Empty wishlist
+No results
+No orders
+Loading
+Network error
+Payment error
+Out of stock
+Session expired
+Invalid coupon
+Server error
+==================================================
+68. VISUAL QUALITY CONTROL
+After every major implementation stage, STOP and inspect the result.
+Ask yourself:
+What is wrong?
+What looks amateur?
+What looks inconsistent?
+What is visually overloaded?
+What is unnecessary?
+What is confusing?
+What is hurting conversion?
+What is hurting usability?
+What is hurting performance?
+What can be improved?
+What is missing?
+What new idea would improve the product?
+Then:
+FIX THE PROBLEMS.
+ADD THE IMPROVEMENTS.
+REFINE THE DESIGN.
+DO NOT simply report problems and continue.
+Every iteration must improve the actual codebase.
+==================================================
+69. INVERTED CORNER QUALITY CONTROL
+Pay special attention to inverted corners.
+If they become:
+Excessive
+Ugly
+Distracting
+Repetitive
+Difficult to use
+REDUCE THEM.
+The goal is:
+"Distinctive design"
+NOT:
+"Everything has an inverted corner."
+Use inverted corners where they create actual visual or functional value.
+Whenever an inverted corner creates negative space, ask:
+"Can this space become useful?"
+If yes, use it for:
+CTA
+Badge
+Banner
+Action
+Navigation
+Product shortcut
+Editorial element
+If not, leave it clean.
+==================================================
+70. DESIGN ITERATION PROCESS
+Do NOT attempt to build the entire project in one step.
+Work PHASE BY PHASE.
+PHASE 1:
+Analyze repository and existing architecture.
+PHASE 2:
+Create design system and visual language.
+PHASE 3:
+Redesign global layout, header, navigation and homepage.
+PHASE 4:
+Build shopping experience.
+PHASE 5:
+Build product system.
+PHASE 6:
+Build cart and checkout.
+PHASE 7:
+Build B2B wholesale system.
+PHASE 8:
+Build Fashion Daily / editorial system.
+PHASE 9:
+Build customer account and loyalty.
+PHASE 10:
+Build admin panel.
+PHASE 11:
+Build CMS and homepage management.
+PHASE 12:
+Implement SEO.
+PHASE 13:
+Implement PWA.
+PHASE 14:
+Performance optimization.
+PHASE 15:
+Security and accessibility.
+PHASE 16:
+Full QA.
+PHASE 17:
+Final visual refinement.
+==================================================
+71. IMPORTANT — WORK ITERATIVELY
+After each phase:
+Build
+Run
+Inspect
+Identify problems
+Explain problems briefly
+Fix them
+Add useful improvements
+Test again
+Continue
+Never blindly continue to the next phase with known problems.
+==================================================
+72. DO NOT ASK FOR PERMISSION FOR OBVIOUS IMPROVEMENTS
+If you identify an obvious improvement that is:
+Safe
+Relevant
+Consistent with the business
+Technically reasonable
+Improves UX
+Improves performance
+Improves conversion
+Implement it.
+Do not stop for unnecessary confirmation.
+However, do not introduce major business rules, payment behavior, legal policies, or destructive database changes without confirmation.
+==================================================
+73. NO MANUAL BUSINESS OPERATIONS
+The goal is to minimize manual work.
+If something can reasonably be automated through:
+Admin panel
+CMS
+Scheduled jobs
+Inventory automation
+Notification automation
+Marketing automation
+Product recommendations
+Order automation
+build the architecture for it.
+The website owner should not need to edit source code for normal daily operations.
+==================================================
+74. TELEGRAM / INSTAGRAM INTEGRATION READY
+The business already has:
+Instagram
+Telegram channel
+Telegram bot
+Prepare integration architecture.
+Potential future features:
+Telegram notifications
+Order status notifications
+Product alerts
+Wholesale notifications
+Campaign broadcasting
+Product sharing
+Social content distribution
+Do not fabricate integrations if credentials/API access are unavailable.
+Build clean integration points.
+==================================================
+75. FINAL QUALITY STANDARD
+The website must NOT look like:
+A generic AI-generated website
+A Bootstrap template
+A simple online store
+A blog with products
+A design experiment without business logic
+It must look like:
+A REAL PREMIUM FASHION COMMERCE PLATFORM.
+The final experience should combine:
+FASHION
++
+COMMERCE
++
+EDITORIAL
++
+WHOLESALE
++
+TECHNOLOGY
++
+COMMUNITY
++
+CRM
+The design should be distinctive enough to be recognizable.
+The inverted-corner / negative-space system should become part of the brand's visual language, but only when it improves the composition.
+==================================================
+76. FINAL PRINCIPLE
+Do not ask:
+"What else should I add?"
+Instead continuously ask:
+"What would make this a better real-world fashion commerce product?"
+Think about:
+UX
+UI
+Business
+Conversion
+SEO
+Performance
+Accessibility
+Scalability
+Security
+Content
+Retention
+B2B
+Mobile
+PWA
+Automation
+Build accordingly.
+START NOW.
+First clone and analyze the GitHub repository.
+Do not immediately rebuild everything.
+First understand the existing project, identify what should be kept, identify what should be replaced, and create the implementation roadmap.
+Then begin PHASE 1.
+Work incrementally.
+After every phase, inspect, critique, fix, improve, and continue until the entire platform is production-ready.

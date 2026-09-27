@@ -1,0 +1,1268 @@
+بله. برای چیزی که مدنظرته، بهتره اصلاً سایت را صرفاً «فروشگاه کمربند و بدلیجات» نبینیم؛ بلکه یک Fashion Commerce Platform طراحی کنیم که سه موتور اصلی داشته باشد:
+فروش تکی B2C ← هسته اصلی سایت
+فروش عمده B2B برای همکاران ← پنل و قیمت‌گذاری اختصاصی
+مجله/روزنامه دیجیتال روزانه Fashion Daily ← ترند، استایل، اخبار و جذب کاربر
+و در کنار این‌ها CRM، باشگاه مشتریان، محتوا، پیشنهاد هوشمند، سئو و ابزارهای فروش قرار بگیرند.
+در ادامه یک Master Prompt می‌دهم که بتوانی تقریباً مستقیم به AIهای کدنویس بدهی.
+Master Prompt — طراحی و ساخت فروشگاه کمربند و اکسسوری
+You are a senior product designer, UX/UI designer, e-commerce architect,
+full-stack developer, SEO strategist, CRM specialist and fashion-commerce
+consultant.
+
+Your task is to design and build a complete, modern, scalable and production-
+ready e-commerce platform for a fashion accessories brand specializing in
+women's belts, fashion accessories, jewelry and related products.
+
+The website must NOT feel like a generic template-based online store.
+
+It should feel like a premium modern fashion-commerce platform combining:
+
+1. B2C online shopping
+2. B2B wholesale shopping for business partners
+3. Daily digital fashion newspaper / magazine
+4. Fashion trends and inspiration
+5. Customer loyalty and CRM
+6. Personalized product discovery
+7. Strong SEO and content marketing
+8. Modern editorial fashion aesthetics
+
+The primary business goal is SELLING PRODUCTS.
+
+The secondary goals are:
+- increasing repeat purchases
+- attracting wholesale partners
+- increasing average order value
+- building a fashion-focused audience
+- generating organic traffic through editorial content
+- creating a recognizable brand ecosystem
+1. ساختار کلی سایت
+Create the following main sections:
+
+HOME
+SHOP
+CATEGORIES
+PRODUCT DETAILS
+WHOLESALE / B2B
+FASHION DAILY
+TRENDING
+NEW ARRIVALS
+BEST SELLERS
+OFFERS
+STYLE GUIDE
+BLOG / MAGAZINE
+ABOUT BRAND
+CONTACT
+ACCOUNT
+WISHLIST
+CART
+CHECKOUT
+منوی اصلی
+خانه
+فروشگاه
+کمربند
+اکسسوری
+بدلیجات
+جدیدها
+پرفروش‌ها
+تخفیف‌ها
+مجله مد
+همکاری / خرید عمده
+در دسکتاپ، Navigation باید حرفه‌ای و مینیمال باشد.
+در موبایل، Bottom Navigation طراحی شود:
+خانه | فروشگاه | جستجو | علاقه‌مندی | حساب
+2. صفحه Home
+Homepage باید کاملاً فروش‌محور باشد.
+ترتیب پیشنهادی:
+Hero Section
+↓
+دسته‌بندی‌های اصلی
+↓
+محصولات جدید
+↓
+پرفروش‌ترین‌ها
+↓
+پیشنهادهای ویژه
+↓
+Shop The Look
+↓
+ترندهای این هفته
+↓
+مجله Fashion Daily
+↓
+محصولات مکمل
+↓
+مزایای خرید
+↓
+عضویت در خبرنامه
+↓
+Instagram / Social Proof
+↓
+Footer
+Hero
+Hero باید قابل مدیریت از پنل ادمین باشد.
+امکان تعریف:
+تصویر
+ویدیو
+عنوان
+توضیح
+CTA
+لینک
+تاریخ شروع کمپین
+تاریخ پایان کمپین
+مثلاً:
+NEW SEASON
+THE DETAILS MATTER
+
+کالکشن جدید اکسسوری
+
+[مشاهده کالکشن]
+3. دسته‌بندی محصولات
+دسته‌بندی‌ها باید قابل توسعه باشند.
+دسته اصلی
+کمربند
+├── کمربند زنانه
+├── کمربند پهن
+├── کمربند باریک
+├── کمربند مجلسی
+├── کمربند چرمی
+├── کمربند زنجیری
+├── کمربند پارچه‌ای
+└── کمربند فانتزی
+
+اکسسوری
+├── گردنبند
+├── دستبند
+├── انگشتر
+├── گوشواره
+├── پابند
+├── گیره مو
+└── اکسسوری کیف
+
+بدلیجات
+├── مینیمال
+├── مجلسی
+├── روزمره
+├── استیل
+└── ست‌ها
+سیستم دسته‌بندی باید Dynamic باشد و ادمین بتواند دسته جدید ایجاد کند.
+4. Product Listing
+صفحه فروشگاه باید قابلیت‌های زیر را داشته باشد:
+Search
+Filter
+Sort
+Pagination / Infinite Scroll
+Wishlist
+Quick View
+Quick Add
+Compare
+فیلترها:
+دسته‌بندی
+قیمت
+رنگ
+جنس
+سایز
+برند
+استایل
+مناسبت
+موجودی
+تخفیف
+جدیدترین
+پرفروش‌ترین
+Sorting:
+جدیدترین
+پرفروش‌ترین
+محبوب‌ترین
+ارزان‌ترین
+گران‌ترین
+بیشترین تخفیف
+پیشنهاد شده
+5. صفحه Product
+صفحه محصول یکی از مهم‌ترین صفحات سایت است.
+اطلاعات:
+Product Images
+Product Video
+Product Name
+Price
+Discount
+Stock
+SKU
+Colors
+Sizes
+Material
+Description
+Specifications
+Size Guide
+Shipping Information
+Returns
+Reviews
+Questions
+Related Products
+Complementary Products
+Recently Viewed
+قابلیت‌های مهم
+Add to Cart
+Buy Now
+Add to Wishlist
+Share
+Copy Link
+Notify Me
+پیشنهاد هوشمند
+مثلاً:
+این کمربند با این محصولات بهتر ست می‌شود:
+
+کمربند + کیف + گردنبند
+و:
+خریداران این محصول معمولاً این موارد را نیز خریدند.
+6. سیستم سایزبندی کمربند
+این بخش بسیار مهم است.
+برای کمربند باید:
+Waist Size Guide
+Belt Size Calculator
+وجود داشته باشد.
+کاربر بتواند اندازه دور کمر خود را وارد کند و سیستم سایز مناسب را پیشنهاد دهد.
+مثلاً:
+دور کمر شما: 82cm
+
+سایز پیشنهادی:
+85
+همچنین راهنمای تصویری اندازه‌گیری طراحی شود.
+7. خرید تکی B2C
+خرید تکی باید ساده و سریع باشد.
+کاربر نباید مجبور باشد برای خرید حساب ایجاد کند.
+Flow:
+Product
+↓
+Buy Now
+↓
+Address
+↓
+Shipping
+↓
+Payment
+↓
+Confirmation
+امکان:
+Guest Checkout
+وجود داشته باشد.
+8. Cart
+سبد خرید باید فقط یک لیست ساده نباشد.
+نمایش:
+Products
+Quantity
+Price
+Discount
+Subtotal
+Shipping
+Final Price
+و پیشنهاد:
+برای تکمیل استایل خود این محصولات را اضافه کنید.
+مثلاً:
+کمربند
++
+گردنبند
++
+دستبند
+9. افزایش Average Order Value
+سیستم باید به شکل هوشمند محصولات مکمل پیشنهاد دهد.
+مثلاً:
+اگر کاربر کمربند خرید:
+
+پیشنهاد:
+کیف
+گردنبند
+دستبند
+گیره مو
+همچنین:
+FREE SHIPPING ABOVE X
+برای افزایش مبلغ سفارش.
+10. خرید عمده B2B
+یک بخش کاملاً جدا برای همکاران ایجاد کن.
+عنوان:
+همکاری با ما
+Wholesale
+B2B
+کاربر بتواند درخواست همکاری بدهد.
+فرم:
+نام
+نام فروشگاه
+شماره تماس
+شهر
+آدرس
+نوع فعالیت
+Instagram
+Website
+تعداد تقریبی خرید ماهانه
+11. پنل همکار
+پس از تأیید ادمین:
+Wholesale Dashboard
+برای همکار فعال شود.
+امکانات:
+Wholesale Products
+Wholesale Prices
+Minimum Order Quantity
+Bulk Add to Cart
+Order History
+Invoices
+Credit
+Special Discounts
+Available Stock
+Restock Notifications
+Support
+مثلاً:
+قیمت مصرف‌کننده:
+450,000
+
+قیمت همکار:
+310,000
+
+حداقل سفارش:
+12 عدد
+12. خرید عمده سریع
+این قابلیت بسیار مهم است.
+همکار بتواند در یک صفحه تعداد زیادی محصول را انتخاب کند.
+مثلاً:
+Product        Color       Size       Qty
+
+Belt 001       Black       85         5
+Belt 001       Brown       90         4
+Belt 002       Black       85         3
+و:
+Add All To Wholesale Cart
+داشته باشد.
+13. قیمت‌گذاری هوشمند B2B
+سیستم باید امکان تعریف چند سطح قیمت داشته باشد:
+Retail
+Wholesale
+VIP Wholesale
+Distributor
+Special Partner
+ادمین بتواند برای هر گروه:
+درصد تخفیف
+قیمت ثابت
+حداقل سفارش
+تعریف کند.
+14. Fashion Daily — روزنامه دیجیتال
+این یکی از بخش‌های متمایز سایت باشد.
+اسم پیشنهادی:
+FASHION DAILY
+یا:
+DAILY EDIT
+ظاهر آن باید شبیه یک مجله / روزنامه دیجیتال مدرن باشد.
+15. محتوای روزانه
+هر روز یک Edition منتشر شود.
+مثلاً:
+FASHION DAILY
+18 SEP 2026
+
+TODAY'S EDITION
+محتوا:
+اخبار مد
+ترندهای روز
+استایل سلبریتی‌ها
+ترند رنگ
+ترند اکسسوری
+ترند کمربند
+استایل خیابانی
+Fashion Week
+برندهای مطرح
+New Collections
+Street Style
+Celebrity Style
+Beauty Trends
+16. ساختار روزنامه دیجیتال
+صفحه:
+Today's Edition
+│
+├── Main Story
+├── Trending Now
+├── Fashion News
+├── Accessory Trend
+├── Color Of The Day
+├── Style Inspiration
+├── Product Spotlight
+└── Editor's Pick
+مثلاً:
+TREND ALERT
+
+Chocolate Brown Is Back
+
+رنگ قهوه‌ای شکلاتی دوباره به یکی از ترندهای اصلی
+اکسسوری تبدیل شده است.
+
+[مشاهده محصولات مرتبط]
+و مستقیماً محصولات سایت به مقاله متصل شوند.
+17. اتصال Content به Commerce
+این قسمت بسیار مهم است.
+هر مقاله بتواند محصول بفروشد.
+مثلاً مقاله:
+5 ترند کمربند برای پاییز
+در انتها:
+SHOP THE TREND
+و محصولات مرتبط نمایش داده شوند.
+همچنین داخل مقاله Product Card قرار بگیرد.
+18. Trending System
+صفحه:
+Trending Now
+با دسته‌بندی:
+Trending Colors
+Trending Belts
+Trending Jewelry
+Trending Styles
+Trending Materials
+Trending Outfits
+ادمین بتواند Trend را ایجاد و مدیریت کند.
+19. Style Guide
+یک بخش آموزشی برای کاربر:
+How to Style a Belt
+What Belt Fits My Body Type?
+How to Match Belt With Shoes?
+Gold or Silver Jewelry?
+How to Layer Jewelry?
+How to Choose Accessories?
+این بخش برای SEO بسیار مهم است.
+20. Search بسیار قدرتمند
+Search باید:
+Autocomplete
+Search Suggestions
+Product Search
+Category Search
+Article Search
+Trend Search
+را پشتیبانی کند.
+مثلاً کاربر بنویسد:
+کمربند مشکی
+نتایج:
+محصولات
+مقالات
+ترندها
+راهنماها
+21. Wishlist
+کاربر بتواند:
+Add to Wishlist
+Remove
+Share Wishlist
+Price Drop Notification
+Back in Stock Notification
+داشته باشد.
+22. Compare
+امکان مقایسه:
+Price
+Material
+Color
+Size
+Width
+Buckle
+Style
+23. Reviews
+Review باید شامل:
+Rating
+Text
+Images
+Verified Purchase
+باشد.
+ادمین بتواند Review را تأیید / رد / مدیریت کند.
+24. Notification System
+سیستم اعلان:
+Order Status
+Payment
+Shipping
+Back in Stock
+Price Drop
+New Collection
+Wholesale Updates
+کانال‌ها:
+SMS
+Email
+Web Notification
+در صورت اتصال سرویس‌های مربوطه.
+25. Customer Account
+پنل کاربر:
+Dashboard
+Orders
+Wishlist
+Addresses
+Wallet
+Coupons
+Loyalty Points
+Notifications
+Recently Viewed
+Reviews
+Support
+Personal Information
+26. Loyalty Program
+باشگاه مشتریان ایجاد شود.
+مثلاً:
+Bronze
+Silver
+Gold
+VIP
+بر اساس:
+Purchase Amount
+Order Count
+Referral
+Reviews
+Engagement
+امکانات:
+Points
+Coupons
+Birthday Reward
+Exclusive Offers
+Early Access
+27. Referral System
+کاربر بتواند لینک دعوت شخصی داشته باشد.
+مثلاً:
+Invite Friends
+
+دوست شما 100,000 تومان تخفیف می‌گیرد
+شما 100 امتیاز دریافت می‌کنید.
+مقادیر باید از پنل ادمین قابل تنظیم باشند.
+28. Gift System
+امکان:
+Gift Wrapping
+Gift Message
+Gift Card
+در Checkout.
+29. Marketing Automation
+سیستم باید برای کمپین‌های مختلف آماده باشد:
+Abandoned Cart
+Welcome Campaign
+First Purchase
+Win Back
+Birthday
+Price Drop
+Back In Stock
+New Collection
+30. Admin Panel
+یک Admin Dashboard کامل طراحی کن.
+Dashboard:
+Today's Sales
+Orders
+Revenue
+Average Order Value
+Customers
+Wholesale Orders
+Top Products
+Low Stock
+Best Categories
+Traffic
+Conversion Rate
+31. Product Management
+ادمین:
+Create Product
+Edit Product
+Delete Product
+Duplicate Product
+Variants
+Sizes
+Colors
+Images
+Videos
+Prices
+Discounts
+Stock
+SKU
+Barcode
+SEO
+Related Products
+Cross Sell
+Upsell
+32. Inventory
+موجودی باید Variant-based باشد.
+مثلاً:
+Black / 85
+Black / 90
+Black / 95
+Brown / 85
+Brown / 90
+هرکدام موجودی مستقل داشته باشند.
+33. Low Stock
+نمایش:
+Low Stock
+Out of Stock
+Fast Selling
+و قابلیت:
+Restock Alert
+34. Coupon System
+ادمین بتواند:
+Percentage Discount
+Fixed Discount
+First Order
+Category Coupon
+Product Coupon
+Wholesale Coupon
+Minimum Order
+Maximum Discount
+Expiration
+Usage Limit
+User Limit
+تعریف کند.
+35. SEO
+ساختار سایت باید SEO-first باشد.
+برای هر:
+Product
+Category
+Article
+Trend
+Guide
+Collection
+امکان:
+SEO Title
+Meta Description
+Slug
+Canonical
+OG Image
+Schema Markup
+وجود داشته باشد.
+Schema:
+Product
+Article
+Breadcrumb
+Organization
+FAQ
+Review
+36. Editorial SEO
+مجله Fashion Daily باید موتور جذب Organic Traffic باشد.
+ساختار URL تمیز:
+/fashion
+/trends
+/fashion-news
+/style-guide
+/products
+/categories
+مقالات باید:
+Internal Linking
+Related Products
+Related Articles
+Author
+Publish Date
+Update Date
+Reading Time
+Tags
+داشته باشند.
+37. Performance
+سایت باید:
+Fast
+Responsive
+Mobile First
+SEO Friendly
+Accessible
+Scalable
+باشد.
+تمرکز ویژه روی:
+Core Web Vitals
+Image Optimization
+Lazy Loading
+Caching
+Code Splitting
+WebP / AVIF
+38. PWA
+در صورت امکان سایت به شکل Progressive Web App طراحی شود.
+امکانات:
+Install Website
+Offline Shell
+Push Notifications
+App-like Navigation
+39. Mobile UX
+Mobile را فقط نسخه کوچک Desktop طراحی نکن.
+برای Mobile:
+Sticky Add To Cart
+Bottom Navigation
+Swipe Product Images
+Quick Filters
+Mobile Search
+Mobile Checkout
+در نظر بگیر.
+40. Design System
+Design System کامل بساز.
+تعریف:
+Colors
+Typography
+Spacing
+Radius
+Shadows
+Buttons
+Inputs
+Cards
+Badges
+Navigation
+Modal
+Drawer
+Toast
+Product Card
+Article Card
+41. Visual Direction
+Visual style:
+Premium
+Minimal
+Modern
+Fashion Editorial
+Clean
+Elegant
+Commercial
+ترکیبی از:
+Luxury Fashion Magazine
++
+Modern E-commerce
++
+Editorial Newspaper
+باشد.
+از UI شلوغ، گرادیان‌های زیاد، کارت‌های بی‌دلیل و ظاهر Generic Template خودداری کن.
+42. رنگ‌بندی
+پالت اولیه پیشنهادی:
+LIGHT:
+Primary: #004741
+Background: #F0EDE4
+Text: #171717
+White: #FFFFFF
+DARK:
+Primary: #21F1A8
+Background: #171717
+Text: #F0EDE4
+اما رنگ‌ها باید در Design Tokens تعریف شوند تا بعداً بتوان آنها را تغییر داد.
+43. Typography
+فونت فارسی مدرن و خوانا استفاده کن.
+Typography باید برای:
+Persian
+English
+Numbers
+بهینه باشد.
+Headingها باید editorial feel داشته باشند.
+44. Dark / Light Mode
+کاربر بتواند بین:
+Light
+Dark
+System
+انتخاب کند.
+ترجیح کاربر ذخیره شود.
+45. Product Cards
+Product Card باید اطلاعات مهم را سریع نشان دهد:
+Image
+Badge
+Wishlist
+Product Name
+Price
+Discount
+Rating
+Color Variants
+Quick Add
+Badgeها:
+NEW
+BEST SELLER
+TRENDING
+SALE
+LIMITED
+46. Collection System
+ادمین بتواند Collection بسازد.
+مثلاً:
+Autumn Collection
+Minimal Collection
+Party Collection
+Office Style
+Street Style
+Gold Collection
+Black Collection
+هر Collection یک Landing Page داشته باشد.
+47. Shop The Look
+به جای فروش محصول تنها، Look بساز.
+مثلاً:
+THE BLACK LOOK
+
+Belt
+Necklace
+Bracelet
+Bag
+کاربر بتواند:
+Add Entire Look To Cart
+را بزند.
+48. AI Features
+در صورت امکان AI integration architecture را آماده کن.
+ویژگی‌ها:
+AI Style Assistant
+Product Recommendation
+Style Matching
+Natural Language Search
+مثلاً کاربر بنویسد:
+یه کمربند برای استایل مشکی مجلسی میخوام
+و سیستم محصولات مرتبط را پیشنهاد دهد.
+49. Personalization
+بر اساس رفتار کاربر:
+Viewed Products
+Purchased Products
+Wishlist
+Categories
+Price Range
+پیشنهادهای شخصی نمایش داده شود.
+مثلاً:
+مخصوص شما
+50. Analytics
+سیستم Analytics برای:
+Product Views
+Add To Cart
+Checkout
+Purchase
+Search
+Wishlist
+Article Views
+Trend Views
+Wholesale Requests
+طراحی شود.
+51. Business Intelligence
+ادمین بتواند ببیند:
+Best Selling Products
+Worst Selling Products
+Best Categories
+Conversion Rate
+Cart Abandonment
+Customer Lifetime Value
+Repeat Purchase Rate
+Average Order Value
+Wholesale Revenue
+Retail Revenue
+52. Security
+امنیت جدی باشد.
+پیاده‌سازی:
+Authentication
+Authorization
+Role Based Access
+Rate Limiting
+Input Validation
+CSRF Protection
+XSS Protection
+Secure Sessions
+Password Hashing
+Audit Logs
+53. Admin Roles
+نقش‌ها:
+Super Admin
+Manager
+Content Manager
+Product Manager
+Order Manager
+Support
+Warehouse
+Marketing
+هر Role دسترسی مخصوص داشته باشد.
+54. Order Management
+ادمین بتواند وضعیت سفارش را تغییر دهد:
+Pending
+Paid
+Processing
+Packed
+Shipped
+Delivered
+Cancelled
+Returned
+Refunded
+55. Shipping
+سیستم Shipping باید قابل توسعه باشد.
+امکان:
+Shipping Methods
+Shipping Cost
+Free Shipping Threshold
+City-based Shipping
+Weight-based Shipping
+56. Return System
+صفحه و سیستم:
+Return Request
+Reason
+Product
+Order
+Status
+Refund
+57. Customer Support
+سیستم پشتیبانی:
+FAQ
+Contact Form
+Ticket
+Live Chat
+در آینده قابلیت اتصال به WhatsApp / Telegram / Instagram DM architecture
+نیز قابل توسعه باشد.
+58. Social Commerce
+محصولات بتوانند به Social Media متصل شوند.
+در سایت:
+Instagram Feed
+Social Proof
+User Generated Content
+وجود داشته باشد.
+59. Newsletter
+بخش:
+FASHION LETTER
+برای دریافت:
+Fashion Daily
+New Products
+Exclusive Offers
+Trend Reports
+60. Footer
+Footer حرفه‌ای:
+Shop
+Categories
+Customer Service
+Wholesale
+Fashion Daily
+About
+Contact
+FAQ
+Shipping
+Returns
+Privacy
+Terms
+Social Media
+Newsletter
+61. زبان
+معماری سایت باید Multi-language ready باشد.
+زبان اصلی:
+Persian / فارسی
+ولی Architecture برای:
+English
+Arabic
+نیز قابل توسعه باشد.
+RTL و LTR هر دو باید از ابتدا در نظر گرفته شوند.
+62. Currency
+سیستم Currency قابل توسعه باشد.
+قیمت‌ها نباید Hard Code شوند.
+Currency system باید قابلیت:
+IRR
+IRT
+USD
+EUR
+را در آینده داشته باشد.
+63. Architecture
+قبل از پیاده‌سازی:
+Analyze requirements
+Define information architecture
+Define database schema
+Define API architecture
+Define authentication
+Define design system
+Define components
+Define responsive layouts
+Define admin architecture
+Define SEO architecture
+سپس implementation را شروع کن.
+64. مهم‌ترین اصل UX
+هیچ قابلیت اضافه‌ای نباید باعث شود کاربر برای خرید سردرگم شود.
+Hierarchy:
+PRIMARY:
+SHOPPING
+SECONDARY:
+WHOLESALE
+TERTIARY:
+FASHION CONTENT
+محتوا باید در نهایت به Commerce کمک کند.
+کاربر باید همیشه بتواند سریع به محصول برسد.
+65. Empty States
+برای تمام صفحات Empty State حرفه‌ای طراحی کن.
+مثلاً:
+Wishlist Empty
+Cart Empty
+No Search Result
+No Orders
+No Notifications
+No Reviews
+66. Loading States
+Skeleton Loading برای:
+Products
+Articles
+Categories
+Dashboard
+طراحی شود.
+67. Error Handling
+Error stateها:
+Network Error
+Payment Error
+Product Unavailable
+Session Expired
+Server Error
+باید UX مناسب داشته باشند.
+68. Accessibility
+از:
+Keyboard Navigation
+ARIA
+Contrast
+Focus States
+Readable Typography
+Screen Reader Compatibility
+پشتیبانی شود.
+69. Database
+Database schema را طوری طراحی کن که حداقل شامل این entityها باشد:
+Users
+Roles
+Products
+ProductVariants
+Categories
+Collections
+Inventory
+Orders
+OrderItems
+Payments
+Shipping
+Addresses
+Reviews
+Wishlists
+Coupons
+LoyaltyPoints
+WholesaleAccounts
+WholesalePrices
+WholesaleOrders
+Articles
+Trends
+FashionDailyEditions
+Tags
+Notifications
+Tickets
+Campaigns
+Analytics
+70. Scalability
+معماری باید طوری باشد که در آینده بتوان اضافه کرد:
+Mobile App
+Marketplace
+Multiple Warehouses
+Multiple Sellers
+International Shipping
+Multi Currency
+AI Shopping Assistant
+Advanced Recommendation Engine
+بدون نیاز به بازنویسی کامل پروژه.
+71. Final UX Flow
+B2C:
+Discover
+↓
+Browse
+↓
+Search / Filter
+↓
+Product
+↓
+Add To Cart
+↓
+Checkout
+↓
+Payment
+↓
+Shipping
+↓
+Review
+↓
+Loyalty
+↓
+Repeat Purchase
+B2B:
+Discover Wholesale
+↓
+Apply
+↓
+Admin Approval
+↓
+Wholesale Account
+↓
+Wholesale Catalog
+↓
+Bulk Order
+↓
+Payment
+↓
+Shipping
+↓
+Repeat Order
+CONTENT:
+Fashion Daily
+↓
+Trend
+↓
+Article
+↓
+Related Products
+↓
+Product
+↓
+Purchase
+72. مهم‌ترین تفاوت سایت
+این سایت نباید فقط:
+"فروشگاه کمربند"
+باشد.
+بلکه باید تبدیل شود به:
+"Fashion Accessories Commerce Platform"
+که در آن:
+CONTENT
++
+TREND
++
+DISCOVERY
++
+SHOPPING
++
+WHOLESALE
++
+COMMUNITY
++
+CRM
+در یک اکوسیستم قرار گرفته‌اند.
+73. خروجی مورد انتظار
+Before writing production code, provide:
+Sitemap
+User flows
+Information architecture
+Design system
+Page list
+Component architecture
+Database schema
+API architecture
+Authentication architecture
+B2C architecture
+B2B architecture
+Fashion Daily architecture
+Admin architecture
+SEO architecture
+Analytics architecture
+Then implement the website systematically.
+Do NOT build everything in one giant component.
+Use reusable components, clean architecture, modular code and scalable folder
+structure.
+The final result should look like a real premium fashion-commerce startup,
+not an AI-generated demo or generic e-commerce template.
+
+---
+
+## اما چند قابلیت مهم دیگر هم پیشنهاد می‌کنم
+
+چند چیز را عمداً جدا می‌کنم چون به نظرم برای مدل کسب‌وکارت ارزش بالایی دارند:
+
+### 1. «تازه رسید» / New Drop
+
+به‌جای اینکه فقط محصول جدید بگذاری:
+
+**NEW DROP**
+
+هر بار که سری جدید جنس می‌آید، یک Drop بساز:
+
+> New Drop — September 2026
+
+و همه محصولات جدید را در یک Landing Page نشان بده.
+
+---
+
+### 2. «امروز چه چیزی ترند است؟»
+
+در صفحه اصلی یک بخش زنده:
+
+> **TRENDING TODAY**
+
+مثلاً:
+
+- کمربند زنجیری
+- اکسسوری نقره‌ای
+- رنگ Chocolate Brown
+- استایل Minimal
+- کمربند پهن
+
+و هر مورد مستقیماً به محصولات مربوط وصل شود.
+
+---
+
+### 3. سیستم «ست پیشنهادی»
+
+این از نظر فروش خیلی مهم است.
+
+مثلاً مشتری وارد محصول:
+
+**کمربند مشکی**
+
+می‌شود و سایت می‌گوید:
+
+> **Complete Your Look**
+
+و ۳ محصول دیگر پیشنهاد می‌کند.
+
+حتی:
+
+**خرید ست = تخفیف X٪**
+
+را می‌توانی اضافه کنی.
+
+---
+
+### 4. سیستم Pre-order
+
+برای بعضی محصولات:
+
+> **COMING SOON**
+
+و:
+
+> Notify Me
+
+یا حتی:
+
+> **Pre-order**
+
+داشته باشی.
+
+---
+
+### 5. Flash Sale
+
+یک بخش:
+
+**FLASH SALE**
+
+با Countdown:
+
+```text
+02 : 14 : 37
+و محصولات محدود.
+البته Countdown باید واقعی باشد و از سمت سرور کنترل شود، نه صرفاً یک تایمر نمایشی.
+6. «قیمت آخرین خرید»
+برای مشتری لاگین‌شده می‌توانی در بعضی محصولات نمایش بدهی:
+آخرین خرید شما: ۳۸۰,۰۰۰ تومان
+و اگر قیمت تغییر کرده:
+قیمت فعلی: ۳۵۰,۰۰۰ تومان
+این می‌تواند برای مشتری قدیمی جذاب باشد.
+7. صفحه مخصوص همکاران
+من حتی پیشنهاد می‌کنم B2B را در Header خیلی واضح قرار بدهی:
+همکاری با ما
+و نه اینکه در Footer مخفی شود.
+چون مشتری عمده یک Persona کاملاً متفاوت از مشتری عادی است.
+8. Quick Reorder برای همکار
+این قابلیت برای B2B فوق‌العاده کاربردی است:
+سفارش مجدد
+همکار سفارش قبلی را باز می‌کند:
+سفارش #10284
+
+[سفارش مجدد همه]
+و سیستم موجودی فعلی را بررسی می‌کند.
+9. روزنامه را فقط «اخبار» نکن
+این نکته مهم است.
+اگر Fashion Daily فقط خبر باشد، تبدیل به یک وبلاگ معمولی می‌شود.
+بهتر است ترکیبی از:
+News + Trends + Education + Inspiration + Commerce
+باشد.
+مثلاً:
+TODAY'S TREND
+↓
+چرا کمربندهای پهن دوباره ترند شده‌اند؟
+↓
+3 روش ست کردن
+↓
+محصولات پیشنهادی ما
+↓
+SHOP THE TREND
+این دقیقاً جایی است که Content → Commerce اتفاق می‌افتد.
+و یک پیشنهاد مهم برای برندت
+ساختار برند را از ابتدا به این شکل تصور کن:
+                    BRAND
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+      SHOP         WHOLESALE    FASHION DAILY
+        │             │             │
+     B2C             B2B        CONTENT
+        │             │             │
+        └─────────────┼─────────────┘
+                      │
+                    CRM
+                      │
+                 LOYALTY
+                      │
+                COMMUNITY
+این باعث می‌شود سایتت فقط جایی برای «دیدن محصول → خرید» نباشد؛ کاربر بتواند از طریق ترند و محتوا وارد شود، محصول کشف کند، خرید کند، دوباره برگردد و در صورت داشتن فروشگاه خودش، وارد بخش همکاری شود.
+اگر بخواهی این را واقعاً بسازی، قدم بعدی بهتر است تبدیل همین Master Prompt به یک PRD + Sitemap + Database Schema + Page-by-Page UI Specification باشد؛ یعنی برای تک‌تک صفحات دقیقاً مشخص کنیم چه Sectionهایی، چه Buttonهایی، چه Componentهایی و چه Flowهایی وجود داشته باشد.
