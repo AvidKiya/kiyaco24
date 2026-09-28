@@ -3,7 +3,8 @@ import { getActiveTrends, getPublishedGuides, getActiveCollections, productsById
 import { getDailyEdition } from "@/lib/daily";
 import { getStore } from "@/lib/server-store";
 
-export const revalidate = 3600;
+// نقشهٔ سایت از دیتابیس ساخته می‌شود؛ پس هنگام درخواست تولید می‌شود نه هنگام build
+export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
