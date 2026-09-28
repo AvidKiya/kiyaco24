@@ -1,0 +1,4 @@
+import type { MetadataRoute } from "next";
+export default function manifest(): MetadataRoute.Manifest {
+  return { id: "/", name: "KIYA — کیا اکسسوری", short_name: "KIYA", description: "جزئیات، امضای تو؛ کمربند و اکسسوری کیا", start_url: "/?source=pwa", scope: "/", display: "standalone", background_color: "#121410", theme_color: "#121410", lang: "fa", dir: "rtl", orientation: "portrait-primary", categories: ["shopping", "lifestyle"], icons: [{ src: "/images/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" }, { src: "/images/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" }, { src: "/images/icon-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" }], shortcuts: [{ name: "فروشگاه", url: "/shop", description: "دیدن کالکشن کیا" }, { name: "پیگیری سفارش", url: "/track" }] };
+}
